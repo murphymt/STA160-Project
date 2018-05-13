@@ -1,7 +1,7 @@
 import requests_cache
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
-import re
+import pandas as pd 
 requests_cache.install_cache("cache")
 
 ## Cybercoders.com Links
@@ -56,6 +56,10 @@ len(analyst_links) + len(data_links) + len(BA_links) + len(big_data_links) + len
 ulinks = list(set(analyst_links + data_links + BA_links + big_data_links + BI_links))
 len(ulinks) # total number of links extracted -> UNIQUE
 
+########################################################################################################
+########################################################################################################
+########################################################################################################
+
 def job_listings(url):
     """
     (Purpose)
@@ -69,38 +73,75 @@ def job_listings(url):
 
     """
     
-    # request the the article
-    req_url = urlopen(url)
-    req_url_soup = BeautifulSoup(req_url, "lxml")
-    
-    
-    for i in demo_job_soup.find_all(name = "div", attrs = {"class" : "job-details"}):
-        if len(i.text) > 0:
-            description_finder = i.find(name = "div", attrs = {"data-section" : "1"})
-            description = "".join(description_finder.text)
+    job_data = pd.DataFrame()
+    for link in url:
+        # request the the article
+        req_url = urlopen(link)
+        req_url_soup = BeautifulSoup(req_url, "lxml")
+        
+        try:
+            try:
+                title_finder = req_url_soup.select("h1.subhead")[0].text.strip()
+            except:
+                title_finder = ""
             
-            duties_finder = i.find(name = "div", attrs = {"data-section" : "5"})
-            duties = "".join(duties_finder.text)
+            try:
+                location_finder = req_url_soup.select("div.location")[0].text.strip()
+            except:
+                location_finder = ""
             
-            skills_finder = i.find(name = "div", attrs = {"data-section" : "7"})
-            skills = "".join(skills_finder.text)
+            try:
+                description_finder = req_url_soup.find(name = "div", attrs = {"data-section" : "1"})
+                description = "".join(description_finder.text)
+            except:
+                description = ""
             
-            benefits_finder = i.find(name = "div", attrs = {"data-section" : "8"})
-            benefits = "".join(benefits_finder.text)
+            try:
+                duties_finder = req_url_soup.find(name = "div", attrs = {"data-section" : "5"})
+                duties = "".join(duties_finder.text)
+            except:
+                duties = ""
             
+            try:
+                skills_finder = req_url_soup.find(name = "div", attrs = {"data-section" : "7"})
+                skills = "".join(skills_finder.text)
+            except:
+                skills = ""
             
-        dict_listing = {"description" : description, 
-                        "responsibilties" : duties, 
-                        "skills" : skills,
-                        "benefits" : benefits}
-    
-    return(dict_articles)
+            try:
+                benefits_finder = req_url_soup.find(name = "div", attrs = {"data-section" : "8"})
+                benefits = "".join(benefits_finder.text)
+            except:
+                benefits = ""
+            
+            try:
+                preferred_skills = req_url_soup.select("ul.skill-list")[0].text.split()
+            except:
+                preferred_skills = [""]
 
+            dict_listing = {"title" : title_finder,
+                            "location" : location_finder,
+                            "description" : description, 
+                            "responsibilties" : duties, 
+                            "skills" : skills,
+                            "preferred_skills" : preferred_skills,
+                            "benefits" : benefits}
+                            
+            job_data = job_data.append(dict_listing, ignore_index = True)
+        
+        except:
+            dict_listing = {"title" : "",
+                            "location" : "",
+                            "description" : "", 
+                            "responsibilties" : "", 
+                            "skills" : "",
+                            "preferred_skills" : [""],
+                            "benefits" : ""}
+            job_data = job_data.append(dict_listing, ignore_index = True)
+        
+    return(job_data)
 
-
-
-
-
+test = job_listings(ulinks)
 
 
 
