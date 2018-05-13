@@ -1,6 +1,7 @@
 import requests_cache
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
+import re
 requests_cache.install_cache("cache")
 
 ## Cybercoders.com Links
@@ -55,11 +56,45 @@ len(analyst_links) + len(data_links) + len(BA_links) + len(big_data_links) + len
 ulinks = list(set(analyst_links + data_links + BA_links + big_data_links + BI_links))
 len(ulinks) # total number of links extracted -> UNIQUE
 
-demo_open = urlopen('https://www.cybercoders.com/data-scientist-job-414707')
-demo_parse = BeautifulSoup(demo_open, "lxml")
-demo_content = demo_parse.select("h1.subhead")[0].text.strip()
+def job_listings(url):
+    """
+    (Purpose)
+    Extracts the job listing description, requirements, preferred skills, and salary range/benefits
+    
+    (Args)
+    (url) : url for job listing
+    
+    (Returns)
+    A dictionary of the listing description, requirements, preferred skills, and salary range/benefits
 
-
+    """
+    
+    # request the the article
+    req_url = urlopen(url)
+    req_url_soup = BeautifulSoup(req_url, "lxml")
+    
+    
+    for i in demo_job_soup.find_all(name = "div", attrs = {"class" : "job-details"}):
+        if len(i.text) > 0:
+            description_finder = i.find(name = "div", attrs = {"data-section" : "1"})
+            description = "".join(description_finder.text)
+            
+            duties_finder = i.find(name = "div", attrs = {"data-section" : "5"})
+            duties = "".join(duties_finder.text)
+            
+            skills_finder = i.find(name = "div", attrs = {"data-section" : "7"})
+            skills = "".join(skills_finder.text)
+            
+            benefits_finder = i.find(name = "div", attrs = {"data-section" : "8"})
+            benefits = "".join(benefits_finder.text)
+            
+            
+        dict_listing = {"description" : description, 
+                        "responsibilties" : duties, 
+                        "skills" : skills,
+                        "benefits" : benefits}
+    
+    return(dict_articles)
 
 
 
