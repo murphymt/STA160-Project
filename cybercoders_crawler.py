@@ -115,33 +115,40 @@ def job_listings(url):
                 benefits = ""
             
             try:
-                preferred_skills = req_url_soup.select("ul.skill-list")[0].text.split()
+                preferred_skills = req_url_soup.select("ul.skill-list")[0].text.split("\n")
+                preferred_skills = list(filter(None, preferred_skills))
             except:
                 preferred_skills = [""]
 
-            dict_listing = {"title" : title_finder,
-                            "location" : location_finder,
-                            "description" : description, 
-                            "responsibilties" : duties, 
-                            "skills" : skills,
-                            "preferred_skills" : preferred_skills,
-                            "benefits" : benefits}
+            dict_listing = {"Job_Title" : title_finder,
+                            "Location" : location_finder,
+                            "Description" : description, 
+                            "Responsibilities" : duties, 
+                            "Required_Skills" : skills,
+                            "Preferred_Skills" : preferred_skills,
+                            "Benefits" : benefits}
                             
             job_data = job_data.append(dict_listing, ignore_index = True)
         
         except:
-            dict_listing = {"title" : "",
-                            "location" : "",
-                            "description" : "", 
-                            "responsibilties" : "", 
-                            "skills" : "",
-                            "preferred_skills" : [""],
-                            "benefits" : ""}
+            dict_listing = {"Job_Title" : "",
+                            "Location" : "",
+                            "Description" : "", 
+                            "Responsibilities" : "", 
+                            "Required_Skills" : "",
+                            "Preferred_Skills" : [""],
+                            "Benefits" : ""}
             job_data = job_data.append(dict_listing, ignore_index = True)
         
     return(job_data)
 
-test = job_listings(ulinks)
+test = job_listings(ulinks[1:10])
+
+my_data = test[["Job_Title","Location","Description","Responsibilities","Required_Skills","Preferred_Skills", "Benefits"]]
+
+my_data.to_csv("cybercoders_data.csv", encoding="utf-8", index=False)
+
+
 
 
 
