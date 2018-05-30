@@ -5,7 +5,7 @@ import time
 import re
 import os
 
-wd = "/Users/tmm/Documents/GitHub/STA160-Project"
+wd = "/Users/tmm/Documents/GitHub/STA160-Project/Working/1Data_Processing/cyber_coders"
 os.chdir(wd)
     
 def shell_crawler(search, search_terms, num_pages):
