@@ -1,7 +1,7 @@
 import requests
 import pandas as pd
 import lxml.html as html
-import time
+#import time
 import re
 import os
 
@@ -24,26 +24,25 @@ def shell_crawler(search, search_terms, num_pages):
     (Returns)
     job_titles : list of the job titles corresponding to each listing of the search results
     job_links : list of the urls corresponsing to each listing of the search results
+    job_type : the "statistics" related search terms that were "techinically" inputted into the cybercoder search box
+
     """
     
     # query each job type (data scientist, data analyst, data engineer), crawl through each page, extract (titles, links)
+    job_type = []
     job_titles = []
     job_links = []
     total_response = []
     flattened_set = []
-
-    for term in search:
-        i = 0
-        page_count = num_pages[i]
-        for j in range(page_count + 1):
-            j = j + 1
-            url = term + str(j)
-            response = requests.get(url)
-            response_tree = html.fromstring(response.content)
-            title_elements = response_tree.xpath('//div[@class="job-title"]/a')
-            total_response.append(title_elements)
-        i = i + 1
-            
+  
+    for j in range(num_pages + 1):
+        j = j + 1
+        url = search + str(j)
+        response = requests.get(url)
+        response_tree = html.fromstring(response.content)
+        title_elements = response_tree.xpath('//div[@class="job-title"]/a')
+        total_response.append(title_elements)
+        
     for sub_response in total_response:
         for val in sub_response:
             flattened_set.append(val)
@@ -53,9 +52,66 @@ def shell_crawler(search, search_terms, num_pages):
         link = title_tag.items()[0][1]
         job_titles.append(title)
         job_links.append('https://www.cybercoders.com' + link)
+        job_type.append(search_terms)
         
-    
-    return job_titles, job_links
+    return job_titles, job_links, job_type
+
+# Analyst : 191 job, pages = 9.9 -> 10
+# Data : pages = 36.95 -> 37
+# Business Analyst : pages = 2.45 -> 3
+# Big Data : pages = 8.7 -> 9
+# Business Intellgience : pages = 3.15 -> 4
+analyst_url = "https://www.cybercoders.com/jobs/analyst-jobs/?page=" # Analyst Jobs
+data_url = "https://www.cybercoders.com/jobs/data-jobs/?page=" # Data Jobs
+BA_url = "https://www.cybercoders.com/jobs/business-analyst-jobs/?page=" # Business Analyst Jobs
+big_data_url = "https://www.cybercoders.com/jobs/big-data-jobs/?page=" # Big Data Jobs
+BI_url = "https://www.cybercoders.com/jobs/business-intelligence-jobs/?page=" # Business Intelligence Jobs
+
+search = [analyst_url, data_url, BA_url, big_data_url, BI_url] # append base urls into a list
+search_terms = ['Analyst', 'Data', 'Business Analyst', 'Big Data', 'Business Intelligence'] # define search terms
+num_pages = [10, 37, 3, 9, 4] # number of pages per search term (number of results divided by 20 listings per page)
+
+
+analyst_crawl = shell_crawler(search[0], search_terms[0], num_pages[0])
+analyst_titles = analyst_crawl[0]
+analyst_links = analyst_crawl[1]
+analyst_type = analyst_crawl[2]
+
+Data_crawl = shell_crawler(search[1], search_terms[1], num_pages[1])
+Data_titles = Data_crawl[0]
+Data_links = Data_crawl[1]
+Data_type = Data_crawl[2]
+
+BA_crawl = shell_crawler(search[2], search_terms[2], num_pages[2])
+BA_titles = BA_crawl[0]
+BA_links = BA_crawl[1]
+BA_type = BA_crawl[2]
+
+BD_crawl = shell_crawler(search[3], search_terms[3], num_pages[3])
+BD_titles = BD_crawl[0]
+BD_links = BD_crawl[1]
+BD_type = BD_crawl[2]
+
+BI_crawl = shell_crawler(search[4], search_terms[4], num_pages[4])
+BI_titles = BI_crawl[0]
+BI_links = BI_crawl[1]
+BI_type = BI_crawl[2]
+
+job_titles_raw = analyst_titles + Data_titles + BA_titles + BD_titles + BI_titles
+job_links_raw = analyst_links + Data_links + BA_links + BD_links + BI_links
+job_type_raw = analyst_type + Data_type + BA_type + BD_type + BI_type
+
+# create final dataframe
+dcheck_cols = ['Search', 'Title', 'URL']
+dcheck_df = pd.DataFrame({'Search' : job_type_raw,
+                          'Title': job_titles_raw,
+                          'URL' : job_links_raw}, columns = dcheck_cols) 
+
+# drop duplicates conditioned on the URLS
+dcheck_df = dcheck_df.drop_duplicates(subset = 'URL', keep = 'last')
+job_titles = list(dcheck_df['Title'])
+job_links = list(dcheck_df['URL'])
+job_type = list(dcheck_df['Search'])
 
 def location(newtree, location_list):
     """
@@ -150,60 +206,36 @@ def job_crawler(job_links):
     description_list = []
     skills_list = []
     
-    for url in range(len(job_links)):
-        listing = job_links[url]
-        response = requests.get(listing)
-        time.sleep(0.50)
+    for url in job_links:
+        response = requests.get(url)
         response_tree = html.fromstring(response.content)
         
         location(response_tree, location_list) # call location helper function
         wage(response_tree, wage_list) # call wage helper function
         description(response_tree, description_list) # call description helper function
         skills(response_tree, skills_list) # call skills helper funciton
-        
-        url = url + 1
+        #time.sleep(0.25)
     
     return location_list, wage_list, description_list, skills_list
 
-# Analyst : pages = 9.9 -> 10
-# Data : pages = 36.95 -> 37
-# Business Analyst : pages = 2.45 -> 3
-# Big Data : pages = 8.7 -> 9
-# Business Intellgience : pages = 3.15 -> 4
-analyst_url = "https://www.cybercoders.com/jobs/analyst-jobs/?page=" # Analyst Jobs
-data_url = "https://www.cybercoders.com/jobs/data-jobs/?page=" # Data Jobs
-BA_url = "https://www.cybercoders.com/jobs/business-analyst-jobs/?page=" # Business Analyst Jobs
-big_data_url = "https://www.cybercoders.com/jobs/big-data-jobs/?page=" # Big Data Jobs
-BI_url = "https://www.cybercoders.com/jobs/business-intelligence-jobs/?page=" # Business Intelligence Jobs
-
-search = [analyst_url, data_url, BA_url, big_data_url, BI_url] # append base urls into a list
-search_terms = ['Analyst', 'Data', 'Business Analyst', 'Big Data', 'Business Intelligence'] # define search terms
-num_pages = [10, 37, 3, 9, 4] # number of pages per search term (number of results divided by 20 listings per page)
-
-# call the initial crawl to extract titles and their corresponding links
-init_crawl = shell_crawler(search, search_terms, num_pages)
-job_titles = init_crawl[0]
-job_links = init_crawl[1]
-
 # using the title and links crawl through the listings and extract the key information
-prim_crawl = job_crawler(job_links)
-locations = prim_crawl[0]
-salaries = prim_crawl[1]
-descriptions = prim_crawl[2]
-qualifications = prim_crawl[3]
+listing_crawl = job_crawler(job_links)
+location_list = listing_crawl[0]
+wage_list = listing_crawl[1]
+description_list = listing_crawl[2]
+skills_list = listing_crawl[3]
 
 # create final dataframe
-df_columns = ['Title','Location','Salary','Description','Skills','URL']
-jobs_df = pd.DataFrame({'Title': job_titles,
-                        'Location' : locations, 
-                        'Salary' : salaries, 
-                        'Description' : descriptions, 
-                        'Skills' : qualifications, 
+df_columns = ['Search', 'Title','Location','Salary','Description','Skills','URL']
+jobs_df = pd.DataFrame({'Search' : job_type,
+                        'Title': job_titles,
+                        'Location' : location_list, 
+                        'Salary' : wage_list, 
+                        'Description' : description_list, 
+                        'Skills' : skills_list, 
                         'URL' : job_links}, columns = df_columns) 
 
-# drop duplicates conditioned on the URLS
-final_df = jobs_df.drop_duplicates(subset = 'URL', keep = False)
-final_df.to_csv('raw_jobs_data.csv', index = False)
+jobs_df.to_csv('raw_jobs_data.csv', index = False)
 
 
 
