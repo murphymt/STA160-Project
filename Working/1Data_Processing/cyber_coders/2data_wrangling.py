@@ -1,4 +1,5 @@
 import pandas as pd
+import requests
 import re
 
 jobs_scrub = pd.read_csv('raw_jobs_data.csv')
@@ -51,6 +52,28 @@ def skills_clean(jobs_scrub, field):
     for i in range(nrows):
         jobs_scrub[field][i] = list(filter(None, jobs_scrub[field][i]))
     return jobs_scrub[field]
+
+def geo_cords(jobs_scrub, field):
+    
+    longitude = []
+    latitude = []
+    
+    nrows, ncols = jobs_scrub.shape
+    
+    for i in range(nrows):
+        address = jobs_scrub[field][i]
+        api_key = "AIzaSyBu6BJ2BO7GHPPDnPKcowykaNy67ib5CRE"
+        api_response = requests.get('https://maps.googleapis.com/maps/api/geocode/json?address={0}&key={1}'.format(address, api_key))
+        api_response_dict = api_response.json()
+        i +=1
+        if api_response_dict['status'] == 'OK':
+            lon = api_response_dict['results'][0]['geometry']['location']['lng']
+            lat = api_response_dict['results'][0]['geometry']['location']['lat']
+            
+            longitude.append(lon)
+            latitude.append(lat)
+    
+    return longitude, latitude
 
 def location_clean(jobs_scrub, field):
     """
@@ -130,6 +153,7 @@ def salary_clean(jobs_scrub, field):
 
 description_list = description_scrub(jobs_scrub, 'Description')
 skills_list = skills_clean(jobs_scrub, 'Skills')
+geo_list = geo_cords(jobs_scrub, 'Location')
 locations_list = location_clean(jobs_scrub, 'Location')
 wage_list = salary_clean(jobs_scrub, 'Salary')
 
@@ -137,18 +161,25 @@ jobs_scrub['Description'] = description_list
 jobs_scrub['Skills'] = skills_list
 jobs_scrub['Cities'] = locations_list[0]
 jobs_scrub['States'] = locations_list[1]
+jobs_scrub['Longitude'] = geo_list[0]
+jobs_scrub['Latitude'] = geo_list[1]
 jobs_scrub['Min_Salary'] = wage_list[0]
 jobs_scrub['Max_Salary'] = wage_list[1]
 jobs_scrub['Mean_Salary'] = wage_list[2]
 jobs_scrub = jobs_scrub[jobs_scrub['Description'] != '']
 
-jobs_scrub = jobs_scrub[['Search', 'Title', 'Cities', 'States', 'Description', 'Skills', 'Min_Salary', 'Max_Salary', 'Mean_Salary', 'URL']]
+jobs_scrub = jobs_scrub[['Search', 
+                         'Title', 
+                         'Cities', 
+                         'States', 
+                         'Longitude', 
+                         'Latitude', 
+                         'Description', 
+                         'Skills', 
+                         'Min_Salary', 
+                         'Max_Salary', 
+                         'Mean_Salary', 
+                         'URL']]
 
 jobs_scrub.to_csv('jobs_data.csv',index = False)
-
-
-
-
-
-
 
