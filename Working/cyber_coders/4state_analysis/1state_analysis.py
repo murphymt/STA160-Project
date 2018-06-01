@@ -706,6 +706,8 @@ ID_job_counts = ID_job_counts[['Search', 'ID Job Frequency']]
 os.chdir(wd10)
 ID_job_counts.to_csv('ID_job_frequencies.csv', index = False)
 
+wd11 = '/Users/tmm/Documents/GitHub/STA160-Project/Working/cyber_coders/4state_analysis/job_city_frequencies'
+os.chdir(wd11)
 # Number of data scientist listings per city
 ds_city_counts = pd.DataFrame()
 ds = data_scientist_df.copy()
