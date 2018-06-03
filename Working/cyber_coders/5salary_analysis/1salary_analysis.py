@@ -6,7 +6,7 @@
 
 
 
-# How much can you expect to earn for search term overall?
+# How much can you expect to earn for each search term overall?
 
 
 
