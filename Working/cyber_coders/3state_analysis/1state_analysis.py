@@ -74,6 +74,9 @@ wd10 = '/Users/tmm/Documents/GitHub/STA160-Project/Working/cyber_coders/3state_a
 CA_df = master_data.copy()
 CA_df = CA_df[CA_df['States'].str.contains('CA')]
 CA_df.reset_index(drop = True, inplace = True)
+CA_df_out = open('CA_df.pickle', 'wb')
+pickle.dump(CA_df, CA_df_out)
+CA_df_out.close()
 CA_city_counts = pd.DataFrame()
 CA_city_counts['City Frequency'] = CA_df['Cities'].value_counts()
 CA_city_counts['Cities'] = CA_city_counts.index
@@ -98,10 +101,44 @@ CA_job_counts_out = open('CA_job_counts.pickle', 'wb')
 pickle.dump(CA_job_counts, CA_job_counts_out)
 CA_job_counts_out.close()
 
+# Ohio
+OH_df = master_data.copy()
+OH_df = OH_df[OH_df['States'].str.contains('OH')]
+OH_df.reset_index(drop = True, inplace = True)
+OH_df_out = open('OH_df.pickle', 'wb')
+pickle.dump(OH_df, OH_df_out)
+OH_df_out.close()
+OH_city_counts = pd.DataFrame()
+OH_city_counts['City Frequency'] = OH_df['Cities'].value_counts()
+OH_city_counts['Cities'] = OH_city_counts.index
+OH_city_counts.reset_index(drop = True, inplace = True)
+OH_city_counts = OH_city_counts[['Cities', 'City Frequency']]
+os.chdir(wd9)
+OH_city_counts.to_csv('OH_city_frequencies.csv', index = False)
+os.chdir(wd6)
+OH_city_counts_out = open('OH_city_counts.pickle', 'wb')
+pickle.dump(OH_city_counts, OH_city_counts_out)
+OH_city_counts_out.close()
+
+OH_job_counts = pd.DataFrame()
+OH_job_counts['OH Job Frequency'] = OH_df['Search'].value_counts()
+OH_job_counts['Search'] = OH_job_counts.index
+OH_job_counts.reset_index(drop = True, inplace = True)
+OH_job_counts = OH_job_counts[['Search', 'OH Job Frequency']]
+os.chdir(wd10)
+OH_job_counts.to_csv('OH_job_frequencies.csv', index = False)
+os.chdir(wd6)
+OH_job_counts_out = open('OH_job_counts.pickle', 'wb')
+pickle.dump(OH_job_counts, OH_job_counts_out)
+OH_job_counts_out.close()
+
 # Texas
 TX_df = master_data.copy()
 TX_df = TX_df[TX_df['States'].str.contains('TX')]
 TX_df.reset_index(drop = True, inplace = True)
+TX_df_out = open('TX_df.pickle', 'wb')
+pickle.dump(TX_df, TX_df_out)
+TX_df_out.close()
 TX_city_counts = pd.DataFrame()
 TX_city_counts['City Frequency'] = TX_df['Cities'].value_counts()
 TX_city_counts['Cities'] = TX_city_counts.index
@@ -130,6 +167,9 @@ TX_job_counts_out.close()
 MA_df = master_data.copy()
 MA_df = MA_df[MA_df['States'].str.contains('MA')]
 MA_df.reset_index(drop = True, inplace = True)
+MA_df_out = open('MA_df.pickle', 'wb')
+pickle.dump(MA_df, MA_df_out)
+MA_df_out.close()
 MA_city_counts = pd.DataFrame()
 MA_city_counts['City Frequency'] = MA_df['Cities'].value_counts()
 MA_city_counts['Cities'] = MA_city_counts.index
@@ -158,6 +198,9 @@ MA_job_counts_out.close()
 MD_df = master_data.copy()
 MD_df = MD_df[MD_df['States'].str.contains('MD')]
 MD_df.reset_index(drop = True, inplace = True)
+MD_df_out = open('MD_df.pickle', 'wb')
+pickle.dump(MD_df, MD_df_out)
+MD_df_out.close()
 MD_city_counts = pd.DataFrame()
 MD_city_counts['City Frequency'] = MD_df['Cities'].value_counts()
 MD_city_counts['Cities'] = MD_city_counts.index
@@ -186,6 +229,9 @@ MD_job_counts_out.close()
 NY_df = master_data.copy()
 NY_df = NY_df[NY_df['States'].str.contains('NY')]
 NY_df.reset_index(drop = True, inplace = True)
+NY_df_out = open('NY_df.pickle', 'wb')
+pickle.dump(NY_df, NY_df_out)
+NY_df_out.close()
 NY_city_counts = pd.DataFrame()
 NY_city_counts['City Frequency'] = NY_df['Cities'].value_counts()
 NY_city_counts['Cities'] = NY_city_counts.index
@@ -214,6 +260,9 @@ NY_job_counts_out.close()
 PA_df = master_data.copy()
 PA_df = PA_df[PA_df['States'].str.contains('PA')]
 PA_df.reset_index(drop = True, inplace = True)
+PA_df_out = open('PA_df.pickle', 'wb')
+pickle.dump(PA_df, PA_df_out)
+PA_df_out.close()
 PA_city_counts = pd.DataFrame()
 PA_city_counts['City Frequency'] = PA_df['Cities'].value_counts()
 PA_city_counts['Cities'] = PA_city_counts.index
@@ -242,6 +291,9 @@ PA_job_counts_out.close()
 NJ_df = master_data.copy()
 NJ_df = NJ_df[NJ_df['States'].str.contains('NJ')]
 NJ_df.reset_index(drop = True, inplace = True)
+NJ_df_out = open('NJ_df.pickle', 'wb')
+pickle.dump(NJ_df, NJ_df_out)
+NJ_df_out.close()
 NJ_city_counts = pd.DataFrame()
 NJ_city_counts['City Frequency'] = NJ_df['Cities'].value_counts()
 NJ_city_counts['Cities'] = NJ_city_counts.index
@@ -270,6 +322,9 @@ NJ_job_counts_out.close()
 IL_df = master_data.copy()
 IL_df = IL_df[IL_df['States'].str.contains('IL')]
 IL_df.reset_index(drop = True, inplace = True)
+IL_df_out = open('IL_df.pickle', 'wb')
+pickle.dump(IL_df, IL_df_out)
+IL_df_out.close()
 IL_city_counts = pd.DataFrame()
 IL_city_counts['City Frequency'] = IL_df['Cities'].value_counts()
 IL_city_counts['Cities'] = IL_city_counts.index
@@ -298,6 +353,9 @@ IL_job_counts_out.close()
 TN_df = master_data.copy()
 TN_df = TN_df[TN_df['States'].str.contains('TN')]
 TN_df.reset_index(drop = True, inplace = True)
+TN_df_out = open('TN_df.pickle', 'wb')
+pickle.dump(TN_df, TN_df_out)
+TN_df_out.close()
 TN_city_counts = pd.DataFrame()
 TN_city_counts['City Frequency'] = TN_df['Cities'].value_counts()
 TN_city_counts['Cities'] = TN_city_counts.index
@@ -326,6 +384,9 @@ TN_job_counts_out.close()
 KS_df = master_data.copy()
 KS_df = KS_df[KS_df['States'].str.contains('KS')]
 KS_df.reset_index(drop = True, inplace = True)
+KS_df_out = open('KS_df.pickle', 'wb')
+pickle.dump(KS_df, KS_df_out)
+KS_df_out.close()
 KS_city_counts = pd.DataFrame()
 KS_city_counts['City Frequency'] = KS_df['Cities'].value_counts()
 KS_city_counts['Cities'] = KS_city_counts.index
@@ -354,6 +415,9 @@ KS_job_counts_out.close()
 VA_df = master_data.copy()
 VA_df = VA_df[VA_df['States'].str.contains('VA')]
 VA_df.reset_index(drop = True, inplace = True)
+VA_df_out = open('VA_df.pickle', 'wb')
+pickle.dump(VA_df, VA_df_out)
+VA_df_out.close()
 VA_city_counts = pd.DataFrame()
 VA_city_counts['City Frequency'] = VA_df['Cities'].value_counts()
 VA_city_counts['Cities'] = VA_city_counts.index
@@ -382,6 +446,9 @@ VA_job_counts_out.close()
 NC_df = master_data.copy()
 NC_df = NC_df[NC_df['States'].str.contains('NC')]
 NC_df.reset_index(drop = True, inplace = True)
+NC_df_out = open('NC_df.pickle', 'wb')
+pickle.dump(NC_df, NC_df_out)
+NC_df_out.close()
 NC_city_counts = pd.DataFrame()
 NC_city_counts['City Frequency'] = NC_df['Cities'].value_counts()
 NC_city_counts['Cities'] = NC_city_counts.index
@@ -410,6 +477,9 @@ NC_job_counts_out.close()
 WA_df = master_data.copy()
 WA_df = WA_df[WA_df['States'].str.contains('WA')]
 WA_df.reset_index(drop = True, inplace = True)
+WA_df_out = open('WA_df.pickle', 'wb')
+pickle.dump(WA_df, WA_df_out)
+WA_df_out.close()
 WA_city_counts = pd.DataFrame()
 WA_city_counts['City Frequency'] = WA_df['Cities'].value_counts()
 WA_city_counts['Cities'] = WA_city_counts.index
@@ -438,6 +508,9 @@ WA_job_counts_out.close()
 SC_df = master_data.copy()
 SC_df = SC_df[SC_df['States'].str.contains('SC')]
 SC_df.reset_index(drop = True, inplace = True)
+SC_df_out = open('SC_df.pickle', 'wb')
+pickle.dump(SC_df, SC_df_out)
+SC_df_out.close()
 SC_city_counts = pd.DataFrame()
 SC_city_counts['City Frequency'] = SC_df['Cities'].value_counts()
 SC_city_counts['Cities'] = SC_city_counts.index
@@ -466,6 +539,9 @@ SC_job_counts_out.close()
 MO_df = master_data.copy()
 MO_df = MO_df[MO_df['States'].str.contains('MO')]
 MO_df.reset_index(drop = True, inplace = True)
+MO_df_out = open('MO_df.pickle', 'wb')
+pickle.dump(MO_df, MO_df_out)
+MO_df_out.close()
 MO_city_counts = pd.DataFrame()
 MO_city_counts['City Frequency'] = MO_df['Cities'].value_counts()
 MO_city_counts['Cities'] = MO_city_counts.index
@@ -494,6 +570,9 @@ MO_job_counts_out.close()
 GA_df = master_data.copy()
 GA_df = GA_df[GA_df['States'].str.contains('GA')]
 GA_df.reset_index(drop = True, inplace = True)
+GA_df_out = open('GA_df.pickle', 'wb')
+pickle.dump(GA_df, GA_df_out)
+GA_df_out.close()
 GA_city_counts = pd.DataFrame()
 GA_city_counts['City Frequency'] = GA_df['Cities'].value_counts()
 GA_city_counts['Cities'] = GA_city_counts.index
@@ -522,6 +601,9 @@ GA_job_counts_out.close()
 UT_df = master_data.copy()
 UT_df = UT_df[UT_df['States'].str.contains('UT')]
 UT_df.reset_index(drop = True, inplace = True)
+UT_df_out = open('UT_df.pickle', 'wb')
+pickle.dump(UT_df, UT_df_out)
+UT_df_out.close()
 UT_city_counts = pd.DataFrame()
 UT_city_counts['City Frequency'] = UT_df['Cities'].value_counts()
 UT_city_counts['Cities'] = UT_city_counts.index
@@ -550,6 +632,9 @@ UT_job_counts_out.close()
 DC_df = master_data.copy()
 DC_df = DC_df[DC_df['States'].str.contains('DC')]
 DC_df.reset_index(drop = True, inplace = True)
+DC_df_out = open('DC_df.pickle', 'wb')
+pickle.dump(DC_df, DC_df_out)
+DC_df_out.close()
 DC_city_counts = pd.DataFrame()
 DC_city_counts['City Frequency'] = DC_df['Cities'].value_counts()
 DC_city_counts['Cities'] = DC_city_counts.index
@@ -578,6 +663,9 @@ DC_job_counts_out.close()
 IN_df = master_data.copy()
 IN_df = IN_df[IN_df['States'].str.contains('IN')]
 IN_df.reset_index(drop = True, inplace = True)
+IN_df_out = open('IN_df.pickle', 'wb')
+pickle.dump(IN_df, IN_df_out)
+IN_df_out.close()
 IN_city_counts = pd.DataFrame()
 IN_city_counts['City Frequency'] = IN_df['Cities'].value_counts()
 IN_city_counts['Cities'] = IN_city_counts.index
@@ -606,6 +694,9 @@ IN_job_counts_out.close()
 MI_df = master_data.copy()
 MI_df = MI_df[MI_df['States'].str.contains('MI')]
 MI_df.reset_index(drop = True, inplace = True)
+MI_df_out = open('MI_df.pickle', 'wb')
+pickle.dump(MI_df, MI_df_out)
+MI_df_out.close()
 MI_city_counts = pd.DataFrame()
 MI_city_counts['City Frequency'] = MI_df['Cities'].value_counts()
 MI_city_counts['Cities'] = MI_city_counts.index
@@ -634,6 +725,9 @@ MI_job_counts_out.close()
 CT_df = master_data.copy()
 CT_df = CT_df[CT_df['States'].str.contains('CT')]
 CT_df.reset_index(drop = True, inplace = True)
+CT_df_out = open('CT_df.pickle', 'wb')
+pickle.dump(CT_df, CT_df_out)
+CT_df_out.close()
 CT_city_counts = pd.DataFrame()
 CT_city_counts['City Frequency'] = CT_df['Cities'].value_counts()
 CT_city_counts['Cities'] = CT_city_counts.index
@@ -662,6 +756,9 @@ CT_job_counts_out.close()
 FL_df = master_data.copy()
 FL_df = FL_df[FL_df['States'].str.contains('FL')]
 FL_df.reset_index(drop = True, inplace = True)
+FL_df_out = open('FL_df.pickle', 'wb')
+pickle.dump(FL_df, FL_df_out)
+FL_df_out.close()
 FL_city_counts = pd.DataFrame()
 FL_city_counts['City Frequency'] = FL_df['Cities'].value_counts()
 FL_city_counts['Cities'] = FL_city_counts.index
@@ -690,6 +787,9 @@ FL_job_counts_out.close()
 NV_df = master_data.copy()
 NV_df = NV_df[NV_df['States'].str.contains('NV')]
 NV_df.reset_index(drop = True, inplace = True)
+NV_df_out = open('NV_df.pickle', 'wb')
+pickle.dump(NV_df, NV_df_out)
+NV_df_out.close()
 NV_city_counts = pd.DataFrame()
 NV_city_counts['City Frequency'] = NV_df['Cities'].value_counts()
 NV_city_counts['Cities'] = NV_city_counts.index
@@ -718,6 +818,9 @@ NV_job_counts_out.close()
 AL_df = master_data.copy()
 AL_df = AL_df[AL_df['States'].str.contains('AL')]
 AL_df.reset_index(drop = True, inplace = True)
+AL_df_out = open('AL_df.pickle', 'wb')
+pickle.dump(AL_df, AL_df_out)
+AL_df_out.close()
 AL_city_counts = pd.DataFrame()
 AL_city_counts['City Frequency'] = AL_df['Cities'].value_counts()
 AL_city_counts['Cities'] = AL_city_counts.index
@@ -746,6 +849,9 @@ AL_job_counts_out.close()
 NH_df = master_data.copy()
 NH_df = NH_df[NH_df['States'].str.contains('NH')]
 NH_df.reset_index(drop = True, inplace = True)
+NH_df_out = open('NH_df.pickle', 'wb')
+pickle.dump(NH_df, NH_df_out)
+NH_df_out.close()
 NH_city_counts = pd.DataFrame()
 NH_city_counts['City Frequency'] = NH_df['Cities'].value_counts()
 NH_city_counts['Cities'] = NH_city_counts.index
@@ -774,6 +880,9 @@ NH_job_counts_out.close()
 CO_df = master_data.copy()
 CO_df = CO_df[CO_df['States'].str.contains('CO')]
 CO_df.reset_index(drop = True, inplace = True)
+CO_df_out = open('CO_df.pickle', 'wb')
+pickle.dump(CO_df, CO_df_out)
+CO_df_out.close()
 CO_city_counts = pd.DataFrame()
 CO_city_counts['City Frequency'] = CO_df['Cities'].value_counts()
 CO_city_counts['Cities'] = CO_city_counts.index
@@ -802,6 +911,9 @@ CO_job_counts_out.close()
 MN_df = master_data.copy()
 MN_df = MN_df[MN_df['States'].str.contains('MN')]
 MN_df.reset_index(drop = True, inplace = True)
+MN_df_out = open('MN_df.pickle', 'wb')
+pickle.dump(MN_df, MN_df_out)
+MN_df_out.close()
 MN_city_counts = pd.DataFrame()
 MN_city_counts['City Frequency'] = MN_df['Cities'].value_counts()
 MN_city_counts['Cities'] = MN_city_counts.index
@@ -830,6 +942,9 @@ MN_job_counts_out.close()
 NE_df = master_data.copy()
 NE_df = NE_df[NE_df['States'].str.contains('NE')]
 NE_df.reset_index(drop = True, inplace = True)
+NE_df_out = open('NE_df.pickle', 'wb')
+pickle.dump(NE_df, NE_df_out)
+NE_df_out.close()
 NE_city_counts = pd.DataFrame()
 NE_city_counts['City Frequency'] = NE_df['Cities'].value_counts()
 NE_city_counts['Cities'] = NE_city_counts.index
@@ -858,6 +973,9 @@ NE_job_counts_out.close()
 OR_df = master_data.copy()
 OR_df = OR_df[OR_df['States'].str.contains('OR')]
 OR_df.reset_index(drop = True, inplace = True)
+OR_df_out = open('OR_df.pickle', 'wb')
+pickle.dump(OR_df, OR_df_out)
+OR_df_out.close()
 OR_city_counts = pd.DataFrame()
 OR_city_counts['City Frequency'] = OR_df['Cities'].value_counts()
 OR_city_counts['Cities'] = OR_city_counts.index
@@ -886,6 +1004,9 @@ OR_job_counts_out.close()
 RI_df = master_data.copy()
 RI_df = RI_df[RI_df['States'].str.contains('RI')]
 RI_df.reset_index(drop = True, inplace = True)
+RI_df_out = open('RI_df.pickle', 'wb')
+pickle.dump(RI_df, RI_df_out)
+RI_df_out.close()
 RI_city_counts = pd.DataFrame()
 RI_city_counts['City Frequency'] = RI_df['Cities'].value_counts()
 RI_city_counts['Cities'] = RI_city_counts.index
@@ -914,6 +1035,9 @@ RI_job_counts_out.close()
 AZ_df = master_data.copy()
 AZ_df = AZ_df[AZ_df['States'].str.contains('AZ')]
 AZ_df.reset_index(drop = True, inplace = True)
+AZ_df_out = open('AZ_df.pickle', 'wb')
+pickle.dump(AZ_df, AZ_df_out)
+AZ_df_out.close()
 AZ_city_counts = pd.DataFrame()
 AZ_city_counts['City Frequency'] = AZ_df['Cities'].value_counts()
 AZ_city_counts['Cities'] = AZ_city_counts.index
@@ -942,6 +1066,9 @@ AZ_job_counts_out.close()
 WI_df = master_data.copy()
 WI_df = WI_df[WI_df['States'].str.contains('WI')]
 WI_df.reset_index(drop = True, inplace = True)
+WI_df_out = open('WI_df.pickle', 'wb')
+pickle.dump(WI_df, WI_df_out)
+WI_df_out.close()
 WI_city_counts = pd.DataFrame()
 WI_city_counts['City Frequency'] = WI_df['Cities'].value_counts()
 WI_city_counts['Cities'] = WI_city_counts.index
@@ -970,6 +1097,9 @@ WI_job_counts_out.close()
 LA_df = master_data.copy()
 LA_df = LA_df[LA_df['States'].str.contains('LA')]
 LA_df.reset_index(drop = True, inplace = True)
+LA_df_out = open('LA_df.pickle', 'wb')
+pickle.dump(LA_df, LA_df_out)
+LA_df_out.close()
 LA_city_counts = pd.DataFrame()
 LA_city_counts['City Frequency'] = LA_df['Cities'].value_counts()
 LA_city_counts['Cities'] = LA_city_counts.index
@@ -998,6 +1128,9 @@ LA_job_counts_out.close()
 KY_df = master_data.copy()
 KY_df = KY_df[KY_df['States'].str.contains('KY')]
 KY_df.reset_index(drop = True, inplace = True)
+KY_df_out = open('KY_df.pickle', 'wb')
+pickle.dump(KY_df, KY_df_out)
+KY_df_out.close()
 KY_city_counts = pd.DataFrame()
 KY_city_counts['City Frequency'] = KY_df['Cities'].value_counts()
 KY_city_counts['Cities'] = KY_city_counts.index
@@ -1026,6 +1159,9 @@ KY_job_counts_out.close()
 ID_df = master_data.copy()
 ID_df = ID_df[ID_df['States'].str.contains('ID')]
 ID_df.reset_index(drop = True, inplace = True)
+ID_df_out = open('ID_df.pickle', 'wb')
+pickle.dump(ID_df, ID_df_out)
+ID_df_out.close()
 ID_city_counts = pd.DataFrame()
 ID_city_counts['City Frequency'] = ID_df['Cities'].value_counts()
 ID_city_counts['Cities'] = ID_city_counts.index
