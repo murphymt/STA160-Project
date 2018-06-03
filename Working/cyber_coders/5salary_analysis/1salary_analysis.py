@@ -10,11 +10,11 @@
 
 
 
-# How much can you expect to earn in each state given search term and how do this differ from the overall expected earnings?
+# How much can you expect to earn in each state given the search term and how do this differ from the overall expected earnings?
 
 
 
-# Are certain skills associated with greater earning more than others?
+# Are certain skills associated with greater earnings more than others?
 
 
 
