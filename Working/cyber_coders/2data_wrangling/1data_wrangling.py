@@ -34,7 +34,8 @@ def description_scrub(jobs_scrub, field):
     removals = ['*','\r','\n','Applicants must be authorized to work in the U.S.']
     for i in range(nrows):
         for j in removals:
-            jobs_scrub[field][i] = jobs_scrub[field][i].replace(j,'')
+            holder = jobs_scrub[field][i].replace(j,'')
+            jobs_scrub.loc[i,field] = holder
     return jobs_scrub[field]
 
 def skills_clean(jobs_scrub, field):
@@ -52,14 +53,20 @@ def skills_clean(jobs_scrub, field):
     """
     nrows, ncols = jobs_scrub.shape
     
-    removals = ['Preferred Skills', '\r', '\n']
+    removals1 = ['Preferred Skills', '\r', '\n']
     for i in range(nrows):
-        for j in removals:
-            jobs_scrub[field][i] = jobs_scrub[field][i].replace(j,'')
-        jobs_scrub[field][i] = jobs_scrub[field][i].split('  ')
+        for j in removals1:
+            holder1 = jobs_scrub[field][i].replace(j,'')
+            jobs_scrub.loc[i,field] = holder1
+        #jobs_scrub.loc[i,field] = jobs_scrub.loc[i,field].split('  ')
     
-    for i in range(nrows):
-        jobs_scrub[field][i] = list(filter(None, jobs_scrub[field][i]))
+    skills_split = lambda jobs_scrub : jobs_scrub[field].split('  ')
+    jobs_scrub[field] = jobs_scrub.apply(skills_split, axis = 1)
+    
+    none_removal = lambda jobs_scrub : list(filter(None, jobs_scrub[field]))
+    jobs_scrub[field] = jobs_scrub.apply(none_removal, axis = 1)
+    
+    
     return jobs_scrub[field]
 
 def location_clean(jobs_scrub, field):
@@ -172,26 +179,32 @@ master_data = jobs_scrub.copy()
 # dataframe for data scientist
 data_scientist_df = master_data.copy()
 data_scientist_df = data_scientist_df[data_scientist_df['Search'].str.contains('Data Scientist')]
+data_scientist_df = data_scientist_df.reset_index(drop = True)
 
 # dataframe for data engineer
 data_engineer_df = master_data.copy()
 data_engineer_df = data_engineer_df[data_engineer_df['Search'].str.contains('Data Engineer')]
+data_engineer_df = data_engineer_df.reset_index(drop = True)
 
 # dataframe for data analyst
 data_analyst_df = master_data.copy()
 data_analyst_df = data_analyst_df[data_analyst_df['Search'].str.contains('Data Analyst')]
+data_analyst_df = data_analyst_df.reset_index(drop = True)
 
 # dataframe for business intelligence
 business_intelligence_df = master_data.copy()
 business_intelligence_df = business_intelligence_df[business_intelligence_df['Search'].str.contains('Business Intelligence')]
+business_intelligence_df = business_intelligence_df.reset_index(drop = True)
 
 # dataframe for finance
 finance_df = master_data.copy()
 finance_df = finance_df[finance_df['Search'].str.contains('Finance')]
+finance_df = finance_df.reset_index(drop = True)
 
 # dataframe for product manager
 product_manager_df = master_data.copy()
 product_manager_df = product_manager_df[product_manager_df['Search'].str.contains('Product Manager')]
+product_manager_df = product_manager_df.reset_index(drop = True)
 
 
 master_data.to_csv('jobs_data.csv',index = False)
@@ -232,8 +245,5 @@ finance_out.close()
 product_manager_out = open('product_manager_data.pickle', 'wb')
 pickle.dump(product_manager_df, product_manager_out)
 product_manager_out.close()
-
-
-
 
 

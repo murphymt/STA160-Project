@@ -7,8 +7,8 @@ import os
 import math
 import pickle
 
-wd1 = "/Users/tmm/Documents/GitHub/STA160-Project/Working/cyber_coders/Data"
-os.chdir(wd1)
+wd0 = "/Users/tmm/Documents/GitHub/STA160-Project/Working/cyber_coders/1data_collection"
+os.chdir(wd0)
     
 def shell_crawler(search, search_terms, num_pages):
     """
@@ -332,7 +332,8 @@ raw_jobs_data_df = raw_jobs_data_df[['Search','Title','Description', 'Skills', '
 
 raw_jobs_data_df.to_csv('raw_jobs_data.csv', index = False)
 
-
+w1 = '/Users/tmm/Documents/GitHub/STA160-Project/Working/cyber_coders/Data'
+os.chdir(w1)
 raw_jobs_out = open('raw_jobs_data.pickle', 'wb')
 pickle.dump(raw_jobs_data_df, raw_jobs_out)
 raw_jobs_out.close()
