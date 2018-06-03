@@ -189,6 +189,32 @@ jobs_scrub = jobs_scrub[['Search',
                          'Mean_Salary', 
                          'URL']]
 
+def skills_to_list(job_df):
+    """
+    (Purpose)
+    The skills field of the master job dataframe is currently a list within a string.
+    Therefore, the skills within the skills field are treated as one long string. 
+    This string needs to be converted to a list. 
+    
+    (Arguments)
+    jobs_scrub : master jobs dataframe 
+    
+    (Returns)
+    jobs_scrub : skills field converted to list
+    """
+
+    for i in range(len(job_df['Skills'])):
+        string_holder = ''.join(job_df['Skills'][i])
+        string_holder = string_holder[string_holder.find('[') + 1:string_holder.find(']')].replace("'","").split(',')
+    
+        for j in range(len(string_holder)):
+            string_holder[j] = string_holder[j].strip()
+        job_df['Skills'][i] = string_holder
+        string_holder = ''
+    
+    return job_df
+
+jobs_scrub = skills_to_list(jobs_scrub)
 jobs_scrub.to_csv('jobs_data.csv',index = False)
 
 

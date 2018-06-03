@@ -1,7 +1,7 @@
 import requests
 import pandas as pd
 import lxml.html as html
-import time
+#import time
 import re
 import os
 import math
@@ -281,7 +281,7 @@ def job_crawler(job_links):
         wage(response_tree, wage_list) # call wage helper function
         description(response_tree, description_list) # call description helper function
         skills(response_tree, skills_list) # call skills helper funciton
-        time.sleep(0.15)
+        #time.sleep(0.15)
     
     return location_list, wage_list, description_list, skills_list
 
@@ -300,7 +300,7 @@ jobs_df = pd.DataFrame({'Search' : job_type,
                         'Salary' : wage_list, 
                         'Description' : description_list, 
                         'Skills' : skills_list, 
-                        'URL' : job_links}, columns = df_columns) 
+                        'URL' : job_links}, columns = df_columns)
 
 jobs_df.to_csv('raw_jobs_data.csv', index = False)
 
