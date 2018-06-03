@@ -1,14 +1,16 @@
 import pandas as pd
-import requests
 import os
 import re
+import pickle
 
-wd2 = "/Users/tmm/Documents/GitHub/STA160-Project/Working/cyber_coders/1data_collection"
+wd2 = "/Users/tmm/Documents/GitHub/STA160-Project/Working/cyber_coders/Data"
 os.chdir(wd2)
 
-jobs_scrub = pd.read_csv('raw_jobs_data.csv')
+jobs_scrub_in = open('raw_jobs_data.pickle', 'rb')
+jobs_scrub = pickle.load(jobs_scrub_in)
 
-jobs_scrub.columns = ['Search', 'Title', 'Location', 'Salary', 'Description', 'Skills', 'URL']
+
+jobs_scrub.columns = ['Search','Title','Description', 'Skills', 'Location', 'Latitude', 'Longitude', 'Salary', 'URL']
 
 wd3 = "/Users/tmm/Documents/GitHub/STA160-Project/Working/cyber_coders/2data_wrangling"
 os.chdir(wd3)
@@ -60,28 +62,6 @@ def skills_clean(jobs_scrub, field):
         jobs_scrub[field][i] = list(filter(None, jobs_scrub[field][i]))
     return jobs_scrub[field]
 
-def geo_cords(jobs_scrub, field):
-    
-    longitude = []
-    latitude = []
-    
-    nrows, ncols = jobs_scrub.shape
-    
-    for i in range(nrows):
-        address = jobs_scrub[field][i]
-        api_key = "AIzaSyA_bzUIipMaoeuqNQkm_62YaVK-YZgOKFc"
-        api_response = requests.get('https://maps.googleapis.com/maps/api/geocode/json?address={0}&key={1}'.format(address, api_key))
-        api_response_dict = api_response.json()
-        i +=1
-        if api_response_dict['status'] == 'OK':
-            lon = api_response_dict['results'][0]['geometry']['location']['lng']
-            lat = api_response_dict['results'][0]['geometry']['location']['lat']
-            
-            longitude.append(lon)
-            latitude.append(lat)
-    
-    return longitude, latitude
-
 def location_clean(jobs_scrub, field):
     """
     (Purpose)
@@ -124,12 +104,12 @@ def salary_clean(jobs_scrub, field):
     min_salary = []
     max_salary = []
     mean_salary = []
-    for i in range(nrows):
-        string_holder = ''.join(jobs_scrub[field][i])
-        string_holder = string_holder[string_holder.find("[") + 1:string_holder.find("]")]
-        string_holder = re.findall(r'\d+', string_holder)
-        jobs_scrub[field][i] = string_holder
-        string_holder = ''
+    #for i in range(nrows):
+    #    string_holder = ''.join(jobs_scrub[field][i])
+    #    string_holder = string_holder[string_holder.find("[") + 1:string_holder.find("]")]
+    #    string_holder = re.findall(r'\d+', string_holder)
+    #    jobs_scrub[field][i] = string_holder
+    #    string_holder = ''
         
     for i in range(nrows):
         for j in range(len(jobs_scrub[field][i])):
@@ -160,7 +140,6 @@ def salary_clean(jobs_scrub, field):
 
 description_list = description_scrub(jobs_scrub, 'Description')
 skills_list = skills_clean(jobs_scrub, 'Skills')
-geo_list = geo_cords(jobs_scrub, 'Location')
 locations_list = location_clean(jobs_scrub, 'Location')
 wage_list = salary_clean(jobs_scrub, 'Salary')
 
@@ -168,8 +147,6 @@ jobs_scrub['Description'] = description_list
 jobs_scrub['Skills'] = skills_list
 jobs_scrub['Cities'] = locations_list[0]
 jobs_scrub['States'] = locations_list[1]
-jobs_scrub['Longitude'] = geo_list[0]
-jobs_scrub['Latitude'] = geo_list[1]
 jobs_scrub['Min_Salary'] = wage_list[0]
 jobs_scrub['Max_Salary'] = wage_list[1]
 jobs_scrub['Mean_Salary'] = wage_list[2]
@@ -177,45 +154,84 @@ jobs_scrub = jobs_scrub[jobs_scrub['Description'] != '']
 
 jobs_scrub = jobs_scrub[['Search', 
                          'Title',
+                         'Description',
+                         'Skills',
                          'Location',
                          'Cities', 
                          'States', 
                          'Latitude', 
                          'Longitude', 
-                         'Description', 
-                         'Skills', 
                          'Min_Salary', 
                          'Max_Salary', 
                          'Mean_Salary', 
                          'URL']]
 
-def skills_to_list(job_df):
-    """
-    (Purpose)
-    The skills field of the master job dataframe is currently a list within a string.
-    Therefore, the skills within the skills field are treated as one long string. 
-    This string needs to be converted to a list. 
-    
-    (Arguments)
-    jobs_scrub : master jobs dataframe 
-    
-    (Returns)
-    jobs_scrub : skills field converted to list
-    """
+# copy cleaned up jobs_data
+master_data = jobs_scrub.copy()
 
-    for i in range(len(job_df['Skills'])):
-        string_holder = ''.join(job_df['Skills'][i])
-        string_holder = string_holder[string_holder.find('[') + 1:string_holder.find(']')].replace("'","").split(',')
-    
-        for j in range(len(string_holder)):
-            string_holder[j] = string_holder[j].strip()
-        job_df['Skills'][i] = string_holder
-        string_holder = ''
-    
-    return job_df
+# dataframe for data scientist
+data_scientist_df = master_data.copy()
+data_scientist_df = data_scientist_df[data_scientist_df['Search'].str.contains('Data Scientist')]
 
-jobs_scrub = skills_to_list(jobs_scrub)
-jobs_scrub.to_csv('jobs_data.csv',index = False)
+# dataframe for data engineer
+data_engineer_df = master_data.copy()
+data_engineer_df = data_engineer_df[data_engineer_df['Search'].str.contains('Data Engineer')]
+
+# dataframe for data analyst
+data_analyst_df = master_data.copy()
+data_analyst_df = data_analyst_df[data_analyst_df['Search'].str.contains('Data Analyst')]
+
+# dataframe for business intelligence
+business_intelligence_df = master_data.copy()
+business_intelligence_df = business_intelligence_df[business_intelligence_df['Search'].str.contains('Business Intelligence')]
+
+# dataframe for finance
+finance_df = master_data.copy()
+finance_df = finance_df[finance_df['Search'].str.contains('Finance')]
+
+# dataframe for product manager
+product_manager_df = master_data.copy()
+product_manager_df = product_manager_df[product_manager_df['Search'].str.contains('Product Manager')]
+
+
+master_data.to_csv('jobs_data.csv',index = False)
+data_scientist_df.to_csv('data_scientist_data.csv', index = False)
+data_engineer_df.to_csv('data_engineer_data.csv', index = False)
+data_analyst_df.to_csv('data_analyst_data.csv', index = False)
+business_intelligence_df.to_csv('BI_data.csv', index = False)
+finance_df.to_csv('finance_data.csv', index = False)
+product_manager_df.to_csv('product_manager_data.csv', index = False)
+
+w4 = '/Users/tmm/Documents/GitHub/STA160-Project/Working/cyber_coders/Data'
+os.chdir(w4)
+
+master_data_out = open('jobs_data.pickle', 'wb')
+pickle.dump(master_data, master_data_out)
+master_data_out.close()
+
+data_scientist_out = open('data_scientist_data.pickle', 'wb')
+pickle.dump(data_scientist_df, data_scientist_out)
+data_scientist_out.close()
+
+data_engineer_out = open('data_engineer_data.pickle', 'wb')
+pickle.dump(data_engineer_df, data_engineer_out)
+data_engineer_out.close()
+
+data_analyst_out = open('data_analyst_data.pickle', 'wb')
+pickle.dump(data_analyst_df, data_analyst_out)
+data_analyst_out.close()
+
+BI_out = open('BI_data.pickle', 'wb')
+pickle.dump(business_intelligence_df, BI_out)
+BI_out.close()
+
+finance_out = open('finance_data.pickle', 'wb')
+pickle.dump(finance_df, finance_out)
+finance_out.close()
+
+product_manager_out = open('product_manager_data.pickle', 'wb')
+pickle.dump(product_manager_df, product_manager_out)
+product_manager_out.close()
 
 
 

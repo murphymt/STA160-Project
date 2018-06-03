@@ -36,3 +36,4 @@ finance_df.to_csv('finance_data.csv', index = False)
 product_manager_df.to_csv('product_manager_data.csv', index = False)
 
 
+master_data['Skills'][0]

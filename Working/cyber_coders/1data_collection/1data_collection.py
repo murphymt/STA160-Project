@@ -5,8 +5,9 @@ import lxml.html as html
 import re
 import os
 import math
+import pickle
 
-wd1 = "/Users/tmm/Documents/GitHub/STA160-Project/Working/cyber_coders/1data_collection"
+wd1 = "/Users/tmm/Documents/GitHub/STA160-Project/Working/cyber_coders/Data"
 os.chdir(wd1)
     
 def shell_crawler(search, search_terms, num_pages):
@@ -285,6 +286,28 @@ def job_crawler(job_links):
     
     return location_list, wage_list, description_list, skills_list
 
+def geo_cords(jobs_df, field):
+    
+    latitude = []
+    longitude = []
+    
+    nrows, ncols = jobs_df.shape
+    
+    for i in range(nrows):
+        address = jobs_df[field][i]
+        api_key = "AIzaSyA_bzUIipMaoeuqNQkm_62YaVK-YZgOKFc"
+        api_response = requests.get('https://maps.googleapis.com/maps/api/geocode/json?address={0}&key={1}'.format(address, api_key))
+        api_response_dict = api_response.json()
+        i +=1
+        if api_response_dict['status'] == 'OK':
+            lat = api_response_dict['results'][0]['geometry']['location']['lat']
+            lon = api_response_dict['results'][0]['geometry']['location']['lng']
+            
+            latitude.append(lat)
+            longitude.append(lon)
+    
+    return latitude, longitude
+
 # using the title and links crawl through the listings and extract the key information
 listing_crawl = job_crawler(job_links)
 location_list = listing_crawl[0]
@@ -294,21 +317,25 @@ skills_list = listing_crawl[3]
 
 # create final dataframe
 df_columns = ['Search', 'Title','Location','Salary','Description','Skills','URL']
-jobs_df = pd.DataFrame({'Search' : job_type,
-                        'Title': job_titles,
-                        'Location' : location_list, 
-                        'Salary' : wage_list, 
-                        'Description' : description_list, 
-                        'Skills' : skills_list, 
-                        'URL' : job_links}, columns = df_columns)
+raw_jobs_data_df = pd.DataFrame({'Search' : job_type,
+                                 'Title': job_titles,
+                                 'Location' : location_list, 
+                                 'Salary' : wage_list, 
+                                 'Description' : description_list, 
+                                 'Skills' : skills_list, 
+                                 'URL' : job_links}, columns = df_columns)
 
-jobs_df.to_csv('raw_jobs_data.csv', index = False)
+geo_list = geo_cords(raw_jobs_data_df, 'Location')
+raw_jobs_data_df['Latitude'] = geo_list[0]
+raw_jobs_data_df['Longitude'] = geo_list[1]
+raw_jobs_data_df = raw_jobs_data_df[['Search','Title','Description', 'Skills', 'Location', 'Latitude', 'Longitude', 'Salary', 'URL']]
+
+raw_jobs_data_df.to_csv('raw_jobs_data.csv', index = False)
 
 
-
-
-
-
+raw_jobs_out = open('raw_jobs_data.pickle', 'wb')
+pickle.dump(raw_jobs_data_df, raw_jobs_out)
+raw_jobs_out.close()
 
 
 
