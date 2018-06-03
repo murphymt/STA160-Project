@@ -42,28 +42,28 @@ pm_df_in = open('product_manager_data.pickle', 'rb')
 pm_df = pickle.load(pm_df_in)
 pm_df_in.close()
 
-programming_terms = ['javascript',
-                     'python',
-                     'java', 
-                     'ruby',
-                     'php',
-                     'c++',
-                     'css',
-                     'c#',
-                     'go',
-                     'c',
-                     'typescript',
-                     'shell',
-                     'swift',
-                     'scala',
-                     'objective-c']
+#programming_terms = ['javascript',
+#                     'python',
+#                     'java', 
+#                     'ruby',
+#                     'php',
+#                     'c++',
+#                     'css',
+#                     'c#',
+#                     'go',
+#                     'c',
+#                     'typescript',
+#                     'shell',
+#                     'swift',
+#                     'scala',
+#                     'objective-c']
 
-analysis = ['excel',
-            'tableau',
-            'sas', 
-            'spss', 
-            'd',
-            'd3'] 
+#analysis = ['excel',
+#            'tableau',
+#            'sas', 
+#            'spss', 
+#            'd',
+#            'd3'] 
 
 def skill_count(job_typeDF):
     """

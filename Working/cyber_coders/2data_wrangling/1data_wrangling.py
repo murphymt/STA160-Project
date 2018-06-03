@@ -1,6 +1,4 @@
-import pandas as pd
 import os
-import re
 import pickle
 
 wd2 = "/Users/tmm/Documents/GitHub/STA160-Project/Working/cyber_coders/Data"
