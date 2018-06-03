@@ -104,6 +104,7 @@ def skill_count(job_typeDF):
 
     return flatten_skills
 
+# What are the most in-demand skills for each search term?
 total_skillFreq = skill_count(jobs_df)
 ds_skillFreq = skill_count(ds_df)
 de_skillFreq = skill_count(de_df)
@@ -111,6 +112,33 @@ da_skillFreq = skill_count(da_df)
 bi_skillFreq = skill_count(bi_df)
 fi_skillFreq = skill_count(fi_df)
 pm_skillFreq = skill_count(pm_df)
+
+# What are the most in-demand skills for each state?
+
+
+
+# What are the most in-demand skills for each city?
+
+
+
+# What are the most in-demand skills for each job?
+
+
+
+# What skills are similar between pairwise search terms?
+# DS:DE | DS:DA | DS:BI | DS:FI | DS:PM
+# DE:DA | DE:BI | DE:FI | DE:PM
+# DA:BI | DA:FI | DA:PM
+# BI:FI | BI:PM
+# FI:PM
+
+
+
+# What skills are unique to each job?
+
+
+
+# What skills differentiate data scientists, data engineers, data analysts, and business intelligence?
 
 
 
