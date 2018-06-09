@@ -109,12 +109,7 @@ def salary_clean(jobs_scrub, field):
     min_salary = []
     max_salary = []
     mean_salary = []
-    #for i in range(nrows):
-    #    string_holder = ''.join(jobs_scrub[field][i])
-    #    string_holder = string_holder[string_holder.find("[") + 1:string_holder.find("]")]
-    #    string_holder = re.findall(r'\d+', string_holder)
-    #    jobs_scrub[field][i] = string_holder
-    #    string_holder = ''
+
         
     for i in range(nrows):
         for j in range(len(jobs_scrub[field][i])):
