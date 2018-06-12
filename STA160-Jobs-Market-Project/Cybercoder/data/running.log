@@ -1,0 +1,443 @@
+2018-06-12 13:23:29,477 : INFO : using symmetric alpha at 0.1
+2018-06-12 13:23:29,477 : INFO : using symmetric eta at 0.1
+2018-06-12 13:23:29,478 : INFO : using serial LDA version on this node
+2018-06-12 13:23:29,484 : INFO : running online (multi-pass) LDA training, 10 topics, 50 passes over the supplied corpus of 510 documents, updating model once every 510 documents, evaluating perplexity every 510 documents, iterating 50x with a convergence threshold of 0.001000
+2018-06-12 13:23:30,084 : INFO : -10.161 per-word bound, 1145.0 perplexity estimate based on a held-out corpus of 510 documents with 50969 words
+2018-06-12 13:23:30,084 : INFO : PROGRESS: pass 0, at document #510/510
+2018-06-12 13:23:30,475 : INFO : topic #3 (0.100): 0.011*"team" + 0.011*"need" + 0.010*"work" + 0.010*"year" + 0.008*"project" + 0.008*"learning" + 0.007*"working" + 0.007*"knowledge" + 0.006*"application" + 0.006*"product"
+2018-06-12 13:23:30,476 : INFO : topic #0 (0.100): 0.012*"team" + 0.012*"need" + 0.011*"product" + 0.011*"year" + 0.009*"work" + 0.007*"working" + 0.006*"application" + 0.006*"performance" + 0.006*"strong" + 0.006*"knowledge"
+2018-06-12 13:23:30,476 : INFO : topic #9 (0.100): 0.013*"knowledge" + 0.011*"need" + 0.011*"year" + 0.008*"product" + 0.008*"tool" + 0.007*"work" + 0.007*"application" + 0.007*"service" + 0.007*"working" + 0.007*"technology"
+2018-06-12 13:23:30,476 : INFO : topic #6 (0.100): 0.012*"knowledge" + 0.011*"need" + 0.008*"year" + 0.008*"java" + 0.007*"develop" + 0.007*"sql" + 0.007*"working" + 0.007*"team" + 0.006*"solution" + 0.006*"tool"
+2018-06-12 13:23:30,476 : INFO : topic #8 (0.100): 0.013*"knowledge" + 0.008*"team" + 0.008*"solution" + 0.008*"need" + 0.007*"tool" + 0.007*"year" + 0.006*"strong" + 0.006*"work" + 0.006*"cloud" + 0.006*"project"
+2018-06-12 13:23:30,476 : INFO : topic diff=4.590396, rho=1.000000
+2018-06-12 13:23:30,943 : INFO : -7.769 per-word bound, 218.2 perplexity estimate based on a held-out corpus of 510 documents with 50969 words
+2018-06-12 13:23:30,943 : INFO : PROGRESS: pass 1, at document #510/510
+2018-06-12 13:23:31,205 : INFO : topic #8 (0.100): 0.011*"knowledge" + 0.009*"team" + 0.009*"tool" + 0.008*"need" + 0.008*"solution" + 0.007*"year" + 0.006*"strong" + 0.006*"work" + 0.006*"application" + 0.006*"service"
+2018-06-12 13:23:31,205 : INFO : topic #9 (0.100): 0.011*"knowledge" + 0.011*"need" + 0.010*"year" + 0.009*"product" + 0.008*"tool" + 0.008*"java" + 0.007*"technology" + 0.007*"service" + 0.007*"cloud" + 0.007*"etc"
+2018-06-12 13:23:31,205 : INFO : topic #7 (0.100): 0.014*"learning" + 0.011*"python" + 0.011*"work" + 0.010*"team" + 0.009*"need" + 0.009*"machine" + 0.008*"year" + 0.007*"working" + 0.007*"tool" + 0.007*"knowledge"
+2018-06-12 13:23:31,206 : INFO : topic #1 (0.100): 0.017*"project" + 0.011*"year" + 0.009*"team" + 0.009*"work" + 0.008*"need" + 0.008*"skill" + 0.007*"working" + 0.006*"passion" + 0.006*"new" + 0.005*"python"
+2018-06-12 13:23:31,206 : INFO : topic #2 (0.100): 0.013*"need" + 0.011*"work" + 0.011*"sql" + 0.009*"year" + 0.009*"team" + 0.007*"strong" + 0.007*"solution" + 0.007*"working" + 0.006*"knowledge" + 0.006*"platform"
+2018-06-12 13:23:31,206 : INFO : topic diff=0.954833, rho=0.577350
+2018-06-12 13:23:31,573 : INFO : -7.506 per-word bound, 181.8 perplexity estimate based on a held-out corpus of 510 documents with 50969 words
+2018-06-12 13:23:31,573 : INFO : PROGRESS: pass 2, at document #510/510
+2018-06-12 13:23:31,768 : INFO : topic #2 (0.100): 0.013*"need" + 0.012*"sql" + 0.011*"work" + 0.011*"year" + 0.008*"team" + 0.008*"strong" + 0.008*"solution" + 0.007*"working" + 0.007*"knowledge" + 0.006*"python"
+2018-06-12 13:23:31,768 : INFO : topic #4 (0.100): 0.012*"learning" + 0.012*"machine" + 0.012*"team" + 0.012*"need" + 0.012*"year" + 0.010*"work" + 0.010*"technology" + 0.008*"customer" + 0.008*"application" + 0.007*"solution"
+2018-06-12 13:23:31,768 : INFO : topic #8 (0.100): 0.010*"knowledge" + 0.010*"tool" + 0.010*"team" + 0.009*"need" + 0.008*"solution" + 0.007*"application" + 0.007*"report" + 0.006*"year" + 0.006*"service" + 0.006*"work"
+2018-06-12 13:23:31,768 : INFO : topic #3 (0.100): 0.013*"reporting" + 0.011*"financial" + 0.010*"need" + 0.010*"work" + 0.010*"knowledge" + 0.009*"project" + 0.008*"team" + 0.008*"year" + 0.008*"user" + 0.008*"working"
+2018-06-12 13:23:31,769 : INFO : topic #5 (0.100): 0.013*"performance" + 0.011*"plus" + 0.009*"knowledge" + 0.009*"need" + 0.007*"team" + 0.007*"year" + 0.007*"position" + 0.007*"solution" + 0.006*"technology" + 0.006*"work"
+2018-06-12 13:23:31,769 : INFO : topic diff=0.693807, rho=0.500000
+2018-06-12 13:23:32,090 : INFO : -7.399 per-word bound, 168.8 perplexity estimate based on a held-out corpus of 510 documents with 50969 words
+2018-06-12 13:23:32,090 : INFO : PROGRESS: pass 3, at document #510/510
+2018-06-12 13:23:32,278 : INFO : topic #1 (0.100): 0.020*"project" + 0.012*"year" + 0.009*"skill" + 0.009*"team" + 0.008*"need" + 0.008*"passion" + 0.008*"work" + 0.007*"teaching" + 0.006*"working" + 0.006*"new"
+2018-06-12 13:23:32,278 : INFO : topic #3 (0.100): 0.014*"reporting" + 0.013*"financial" + 0.011*"knowledge" + 0.010*"need" + 0.010*"project" + 0.009*"work" + 0.009*"user" + 0.008*"working" + 0.008*"position" + 0.007*"team"
+2018-06-12 13:23:32,278 : INFO : topic #4 (0.100): 0.013*"learning" + 0.013*"machine" + 0.012*"team" + 0.012*"year" + 0.012*"need" + 0.010*"work" + 0.009*"technology" + 0.009*"customer" + 0.008*"application" + 0.007*"solution"
+2018-06-12 13:23:32,278 : INFO : topic #9 (0.100): 0.011*"need" + 0.010*"product" + 0.010*"year" + 0.010*"java" + 0.009*"knowledge" + 0.009*"tool" + 0.008*"cloud" + 0.008*"technology" + 0.008*"etc" + 0.008*"service"
+2018-06-12 13:23:32,278 : INFO : topic #8 (0.100): 0.010*"tool" + 0.010*"knowledge" + 0.010*"team" + 0.009*"need" + 0.008*"application" + 0.007*"solution" + 0.007*"report" + 0.007*"service" + 0.006*"work" + 0.006*"project"
+2018-06-12 13:23:32,278 : INFO : topic diff=0.502799, rho=0.447214
+2018-06-12 13:23:32,591 : INFO : -7.348 per-word bound, 162.9 perplexity estimate based on a held-out corpus of 510 documents with 50969 words
+2018-06-12 13:23:32,592 : INFO : PROGRESS: pass 4, at document #510/510
+2018-06-12 13:23:32,784 : INFO : topic #1 (0.100): 0.020*"project" + 0.012*"year" + 0.009*"skill" + 0.009*"team" + 0.008*"passion" + 0.008*"need" + 0.007*"work" + 0.007*"teaching" + 0.007*"working" + 0.006*"quarter"
+2018-06-12 13:23:32,784 : INFO : topic #2 (0.100): 0.014*"sql" + 0.013*"need" + 0.012*"year" + 0.011*"work" + 0.009*"strong" + 0.008*"team" + 0.008*"working" + 0.008*"solution" + 0.007*"knowledge" + 0.006*"tableau"
+2018-06-12 13:23:32,784 : INFO : topic #6 (0.100): 0.017*"knowledge" + 0.011*"need" + 0.008*"java" + 0.008*"develop" + 0.008*"sql" + 0.007*"solution" + 0.007*"working" + 0.007*"year" + 0.006*"database" + 0.006*"team"
+2018-06-12 13:23:32,784 : INFO : topic #7 (0.100): 0.018*"learning" + 0.014*"work" + 0.012*"machine" + 0.012*"python" + 0.010*"need" + 0.009*"team" + 0.009*"year" + 0.007*"working" + 0.006*"knowledge" + 0.006*"please"
+2018-06-12 13:23:32,784 : INFO : topic #5 (0.100): 0.014*"performance" + 0.013*"plus" + 0.010*"knowledge" + 0.009*"need" + 0.007*"solution" + 0.007*"position" + 0.007*"team" + 0.006*"year" + 0.006*"technology" + 0.006*"work"
+2018-06-12 13:23:32,784 : INFO : topic diff=0.365276, rho=0.408248
+2018-06-12 13:23:33,131 : INFO : -7.319 per-word bound, 159.6 perplexity estimate based on a held-out corpus of 510 documents with 50969 words
+2018-06-12 13:23:33,131 : INFO : PROGRESS: pass 5, at document #510/510
+2018-06-12 13:23:33,331 : INFO : topic #7 (0.100): 0.018*"learning" + 0.014*"work" + 0.013*"machine" + 0.012*"python" + 0.010*"need" + 0.010*"year" + 0.010*"team" + 0.007*"working" + 0.007*"please" + 0.006*"knowledge"
+2018-06-12 13:23:33,331 : INFO : topic #5 (0.100): 0.015*"performance" + 0.014*"plus" + 0.010*"knowledge" + 0.009*"need" + 0.007*"solution" + 0.007*"position" + 0.006*"year" + 0.006*"team" + 0.006*"technology" + 0.006*"work"
+2018-06-12 13:23:33,331 : INFO : topic #0 (0.100): 0.015*"team" + 0.012*"product" + 0.011*"need" + 0.010*"year" + 0.009*"work" + 0.007*"working" + 0.006*"environment" + 0.006*"process" + 0.006*"new" + 0.006*"computer"
+2018-06-12 13:23:33,331 : INFO : topic #9 (0.100): 0.011*"need" + 0.010*"java" + 0.010*"product" + 0.010*"year" + 0.009*"tool" + 0.009*"cloud" + 0.008*"technology" + 0.008*"knowledge" + 0.008*"etc" + 0.008*"application"
+2018-06-12 13:23:33,331 : INFO : topic #8 (0.100): 0.011*"tool" + 0.010*"knowledge" + 0.010*"need" + 0.010*"application" + 0.009*"team" + 0.007*"solution" + 0.007*"report" + 0.007*"service" + 0.007*"project" + 0.006*"work"
+2018-06-12 13:23:33,331 : INFO : topic diff=0.267018, rho=0.377964
+2018-06-12 13:23:33,677 : INFO : -7.301 per-word bound, 157.7 perplexity estimate based on a held-out corpus of 510 documents with 50969 words
+2018-06-12 13:23:33,677 : INFO : PROGRESS: pass 6, at document #510/510
+2018-06-12 13:23:33,894 : INFO : topic #5 (0.100): 0.015*"performance" + 0.014*"plus" + 0.010*"knowledge" + 0.009*"need" + 0.007*"solution" + 0.007*"position" + 0.006*"year" + 0.006*"team" + 0.006*"technology" + 0.005*"work"
+2018-06-12 13:23:33,894 : INFO : topic #8 (0.100): 0.011*"tool" + 0.010*"need" + 0.010*"application" + 0.010*"knowledge" + 0.009*"team" + 0.007*"solution" + 0.007*"service" + 0.007*"report" + 0.007*"project" + 0.006*"work"
+2018-06-12 13:23:33,894 : INFO : topic #0 (0.100): 0.015*"team" + 0.012*"product" + 0.011*"need" + 0.010*"year" + 0.009*"work" + 0.007*"working" + 0.006*"environment" + 0.006*"new" + 0.006*"process" + 0.006*"computer"
+2018-06-12 13:23:33,894 : INFO : topic #3 (0.100): 0.016*"reporting" + 0.014*"financial" + 0.012*"knowledge" + 0.010*"project" + 0.010*"need" + 0.009*"user" + 0.009*"position" + 0.008*"working" + 0.008*"work" + 0.008*"application"
+2018-06-12 13:23:33,894 : INFO : topic #2 (0.100): 0.015*"sql" + 0.013*"need" + 0.013*"year" + 0.010*"work" + 0.009*"strong" + 0.008*"working" + 0.008*"team" + 0.008*"solution" + 0.007*"knowledge" + 0.007*"tableau"
+2018-06-12 13:23:33,894 : INFO : topic diff=0.197303, rho=0.353553
+2018-06-12 13:23:34,221 : INFO : -7.289 per-word bound, 156.4 perplexity estimate based on a held-out corpus of 510 documents with 50969 words
+2018-06-12 13:23:34,221 : INFO : PROGRESS: pass 7, at document #510/510
+2018-06-12 13:23:34,402 : INFO : topic #8 (0.100): 0.011*"tool" + 0.010*"application" + 0.010*"need" + 0.010*"knowledge" + 0.009*"team" + 0.007*"solution" + 0.007*"service" + 0.007*"report" + 0.007*"project" + 0.006*"work"
+2018-06-12 13:23:34,402 : INFO : topic #2 (0.100): 0.016*"sql" + 0.014*"need" + 0.013*"year" + 0.010*"work" + 0.009*"strong" + 0.009*"working" + 0.008*"solution" + 0.008*"team" + 0.007*"tableau" + 0.007*"knowledge"
+2018-06-12 13:23:34,402 : INFO : topic #3 (0.100): 0.017*"reporting" + 0.014*"financial" + 0.012*"knowledge" + 0.010*"project" + 0.010*"need" + 0.010*"user" + 0.009*"position" + 0.008*"working" + 0.008*"work" + 0.008*"application"
+2018-06-12 13:23:34,402 : INFO : topic #7 (0.100): 0.019*"learning" + 0.014*"work" + 0.014*"machine" + 0.012*"python" + 0.010*"need" + 0.010*"year" + 0.010*"team" + 0.007*"working" + 0.007*"please" + 0.007*"big"
+2018-06-12 13:23:34,402 : INFO : topic #6 (0.100): 0.017*"knowledge" + 0.010*"need" + 0.008*"java" + 0.008*"develop" + 0.008*"solution" + 0.007*"sql" + 0.007*"working" + 0.007*"environment" + 0.007*"database" + 0.006*"team"
+2018-06-12 13:23:34,402 : INFO : topic diff=0.147924, rho=0.333333
+2018-06-12 13:23:34,713 : INFO : -7.280 per-word bound, 155.5 perplexity estimate based on a held-out corpus of 510 documents with 50969 words
+2018-06-12 13:23:34,714 : INFO : PROGRESS: pass 8, at document #510/510
+2018-06-12 13:23:34,887 : INFO : topic #7 (0.100): 0.020*"learning" + 0.015*"machine" + 0.014*"work" + 0.012*"python" + 0.011*"need" + 0.010*"year" + 0.010*"team" + 0.007*"working" + 0.007*"please" + 0.007*"big"
+2018-06-12 13:23:34,887 : INFO : topic #1 (0.100): 0.022*"project" + 0.012*"year" + 0.010*"passion" + 0.010*"skill" + 0.008*"team" + 0.008*"teaching" + 0.007*"quarter" + 0.007*"scientist" + 0.007*"need" + 0.007*"new"
+2018-06-12 13:23:34,887 : INFO : topic #4 (0.100): 0.013*"learning" + 0.013*"machine" + 0.012*"team" + 0.012*"year" + 0.011*"need" + 0.011*"work" + 0.009*"technology" + 0.009*"customer" + 0.008*"solution" + 0.007*"application"
+2018-06-12 13:23:34,887 : INFO : topic #8 (0.100): 0.011*"tool" + 0.011*"application" + 0.010*"need" + 0.010*"knowledge" + 0.009*"team" + 0.007*"solution" + 0.007*"service" + 0.007*"report" + 0.007*"project" + 0.007*"work"
+2018-06-12 13:23:34,888 : INFO : topic #9 (0.100): 0.011*"need" + 0.010*"java" + 0.010*"product" + 0.010*"year" + 0.009*"tool" + 0.009*"technology" + 0.009*"cloud" + 0.009*"etc" + 0.008*"application" + 0.008*"knowledge"
+2018-06-12 13:23:34,888 : INFO : topic diff=0.112588, rho=0.316228
+2018-06-12 13:23:35,198 : INFO : -7.274 per-word bound, 154.8 perplexity estimate based on a held-out corpus of 510 documents with 50969 words
+2018-06-12 13:23:35,198 : INFO : PROGRESS: pass 9, at document #510/510
+2018-06-12 13:23:35,374 : INFO : topic #2 (0.100): 0.017*"sql" + 0.014*"need" + 0.013*"year" + 0.010*"work" + 0.009*"strong" + 0.009*"working" + 0.008*"solution" + 0.008*"team" + 0.008*"tableau" + 0.007*"knowledge"
+2018-06-12 13:23:35,375 : INFO : topic #6 (0.100): 0.017*"knowledge" + 0.010*"need" + 0.008*"java" + 0.008*"develop" + 0.008*"solution" + 0.007*"sql" + 0.007*"environment" + 0.007*"working" + 0.007*"database" + 0.006*"team"
+2018-06-12 13:23:35,375 : INFO : topic #4 (0.100): 0.013*"learning" + 0.013*"machine" + 0.012*"team" + 0.012*"year" + 0.011*"work" + 0.011*"need" + 0.009*"technology" + 0.009*"customer" + 0.008*"solution" + 0.007*"application"
+2018-06-12 13:23:35,375 : INFO : topic #0 (0.100): 0.015*"team" + 0.012*"product" + 0.011*"need" + 0.010*"year" + 0.009*"work" + 0.007*"working" + 0.006*"new" + 0.006*"environment" + 0.006*"computer" + 0.006*"process"
+2018-06-12 13:23:35,375 : INFO : topic #7 (0.100): 0.020*"learning" + 0.015*"machine" + 0.014*"work" + 0.012*"python" + 0.011*"need" + 0.010*"year" + 0.010*"team" + 0.007*"working" + 0.007*"please" + 0.007*"big"
+2018-06-12 13:23:35,375 : INFO : topic diff=0.087188, rho=0.301511
+2018-06-12 13:23:35,684 : INFO : -7.269 per-word bound, 154.2 perplexity estimate based on a held-out corpus of 510 documents with 50969 words
+2018-06-12 13:23:35,684 : INFO : PROGRESS: pass 10, at document #510/510
+2018-06-12 13:23:35,860 : INFO : topic #9 (0.100): 0.011*"need" + 0.011*"java" + 0.010*"product" + 0.010*"year" + 0.009*"tool" + 0.009*"technology" + 0.009*"cloud" + 0.009*"etc" + 0.008*"application" + 0.008*"knowledge"
+2018-06-12 13:23:35,860 : INFO : topic #7 (0.100): 0.021*"learning" + 0.015*"machine" + 0.014*"work" + 0.012*"python" + 0.011*"need" + 0.010*"year" + 0.010*"team" + 0.007*"working" + 0.007*"please" + 0.007*"big"
+2018-06-12 13:23:35,860 : INFO : topic #3 (0.100): 0.018*"reporting" + 0.015*"financial" + 0.012*"knowledge" + 0.011*"project" + 0.010*"need" + 0.010*"user" + 0.009*"position" + 0.008*"working" + 0.008*"process" + 0.008*"application"
+2018-06-12 13:23:35,861 : INFO : topic #5 (0.100): 0.015*"plus" + 0.015*"performance" + 0.011*"knowledge" + 0.009*"need" + 0.007*"solution" + 0.007*"position" + 0.006*"year" + 0.006*"team" + 0.005*"field" + 0.005*"ability"
+2018-06-12 13:23:35,861 : INFO : topic #8 (0.100): 0.011*"application" + 0.011*"tool" + 0.010*"need" + 0.010*"knowledge" + 0.009*"team" + 0.007*"solution" + 0.007*"service" + 0.007*"project" + 0.007*"report" + 0.007*"work"
+2018-06-12 13:23:35,861 : INFO : topic diff=0.068763, rho=0.288675
+2018-06-12 13:23:36,174 : INFO : -7.265 per-word bound, 153.8 perplexity estimate based on a held-out corpus of 510 documents with 50969 words
+2018-06-12 13:23:36,174 : INFO : PROGRESS: pass 11, at document #510/510
+2018-06-12 13:23:36,353 : INFO : topic #7 (0.100): 0.021*"learning" + 0.016*"machine" + 0.014*"work" + 0.012*"python" + 0.011*"need" + 0.010*"year" + 0.010*"team" + 0.007*"please" + 0.007*"working" + 0.007*"big"
+2018-06-12 13:23:36,353 : INFO : topic #4 (0.100): 0.013*"learning" + 0.013*"machine" + 0.012*"year" + 0.012*"team" + 0.012*"work" + 0.011*"need" + 0.009*"technology" + 0.009*"customer" + 0.008*"solution" + 0.007*"application"
+2018-06-12 13:23:36,353 : INFO : topic #0 (0.100): 0.016*"team" + 0.013*"product" + 0.011*"need" + 0.010*"year" + 0.009*"work" + 0.007*"working" + 0.006*"new" + 0.006*"computer" + 0.006*"environment" + 0.006*"process"
+2018-06-12 13:23:36,353 : INFO : topic #1 (0.100): 0.023*"project" + 0.012*"year" + 0.010*"passion" + 0.010*"skill" + 0.009*"teaching" + 0.008*"team" + 0.008*"quarter" + 0.008*"scientist" + 0.007*"course" + 0.007*"new"
+2018-06-12 13:23:36,353 : INFO : topic #9 (0.100): 0.011*"need" + 0.011*"java" + 0.010*"product" + 0.010*"year" + 0.009*"technology" + 0.009*"tool" + 0.009*"cloud" + 0.009*"etc" + 0.008*"application" + 0.008*"team"
+2018-06-12 13:23:36,353 : INFO : topic diff=0.055278, rho=0.277350
+2018-06-12 13:23:36,663 : INFO : -7.261 per-word bound, 153.4 perplexity estimate based on a held-out corpus of 510 documents with 50969 words
+2018-06-12 13:23:36,663 : INFO : PROGRESS: pass 12, at document #510/510
+2018-06-12 13:23:36,834 : INFO : topic #2 (0.100): 0.018*"sql" + 0.014*"need" + 0.014*"year" + 0.010*"work" + 0.010*"strong" + 0.009*"working" + 0.008*"tableau" + 0.008*"solution" + 0.008*"etl" + 0.008*"team"
+2018-06-12 13:23:36,835 : INFO : topic #5 (0.100): 0.016*"plus" + 0.015*"performance" + 0.011*"knowledge" + 0.009*"need" + 0.007*"solution" + 0.007*"position" + 0.007*"year" + 0.006*"team" + 0.006*"ability" + 0.006*"field"
+2018-06-12 13:23:36,835 : INFO : topic #6 (0.100): 0.017*"knowledge" + 0.010*"need" + 0.008*"java" + 0.008*"solution" + 0.008*"develop" + 0.007*"environment" + 0.007*"sql" + 0.007*"working" + 0.007*"database" + 0.006*"team"
+2018-06-12 13:23:36,835 : INFO : topic #7 (0.100): 0.021*"learning" + 0.016*"machine" + 0.014*"work" + 0.012*"python" + 0.011*"need" + 0.010*"year" + 0.010*"team" + 0.008*"please" + 0.007*"working" + 0.007*"big"
+2018-06-12 13:23:36,835 : INFO : topic #1 (0.100): 0.023*"project" + 0.012*"year" + 0.010*"passion" + 0.010*"skill" + 0.009*"teaching" + 0.008*"team" + 0.008*"quarter" + 0.008*"scientist" + 0.007*"course" + 0.007*"senior"
+2018-06-12 13:23:36,835 : INFO : topic diff=0.045303, rho=0.267261
+2018-06-12 13:23:37,173 : INFO : -7.258 per-word bound, 153.1 perplexity estimate based on a held-out corpus of 510 documents with 50969 words
+2018-06-12 13:23:37,173 : INFO : PROGRESS: pass 13, at document #510/510
+2018-06-12 13:23:37,350 : INFO : topic #5 (0.100): 0.016*"plus" + 0.015*"performance" + 0.011*"knowledge" + 0.009*"need" + 0.007*"solution" + 0.007*"position" + 0.007*"year" + 0.006*"team" + 0.006*"ability" + 0.006*"field"
+2018-06-12 13:23:37,350 : INFO : topic #6 (0.100): 0.018*"knowledge" + 0.010*"need" + 0.008*"solution" + 0.008*"java" + 0.008*"develop" + 0.007*"environment" + 0.007*"working" + 0.007*"sql" + 0.007*"database" + 0.006*"programming"
+2018-06-12 13:23:37,350 : INFO : topic #9 (0.100): 0.011*"need" + 0.011*"java" + 0.010*"product" + 0.010*"year" + 0.009*"technology" + 0.009*"tool" + 0.009*"cloud" + 0.009*"etc" + 0.008*"application" + 0.008*"team"
+2018-06-12 13:23:37,350 : INFO : topic #3 (0.100): 0.018*"reporting" + 0.015*"financial" + 0.012*"knowledge" + 0.012*"project" + 0.010*"need" + 0.010*"user" + 0.009*"position" + 0.008*"process" + 0.008*"working" + 0.008*"application"
+2018-06-12 13:23:37,350 : INFO : topic #0 (0.100): 0.016*"team" + 0.013*"product" + 0.011*"need" + 0.010*"year" + 0.009*"work" + 0.007*"working" + 0.006*"new" + 0.006*"computer" + 0.006*"environment" + 0.006*"process"
+2018-06-12 13:23:37,351 : INFO : topic diff=0.037876, rho=0.258199
+2018-06-12 13:23:37,680 : INFO : -7.256 per-word bound, 152.8 perplexity estimate based on a held-out corpus of 510 documents with 50969 words
+2018-06-12 13:23:37,680 : INFO : PROGRESS: pass 14, at document #510/510
+2018-06-12 13:23:37,861 : INFO : topic #0 (0.100): 0.016*"team" + 0.013*"product" + 0.011*"need" + 0.010*"year" + 0.009*"work" + 0.007*"working" + 0.006*"new" + 0.006*"computer" + 0.006*"environment" + 0.006*"process"
+2018-06-12 13:23:37,861 : INFO : topic #2 (0.100): 0.019*"sql" + 0.014*"need" + 0.014*"year" + 0.010*"work" + 0.010*"strong" + 0.009*"working" + 0.008*"tableau" + 0.008*"etl" + 0.008*"solution" + 0.008*"team"
+2018-06-12 13:23:37,861 : INFO : topic #3 (0.100): 0.018*"reporting" + 0.015*"financial" + 0.012*"knowledge" + 0.012*"project" + 0.010*"need" + 0.010*"user" + 0.009*"position" + 0.008*"process" + 0.008*"working" + 0.008*"application"
+2018-06-12 13:23:37,861 : INFO : topic #5 (0.100): 0.016*"plus" + 0.015*"performance" + 0.011*"knowledge" + 0.009*"need" + 0.007*"solution" + 0.007*"position" + 0.007*"year" + 0.006*"team" + 0.006*"ability" + 0.006*"field"
+2018-06-12 13:23:37,862 : INFO : topic #4 (0.100): 0.013*"learning" + 0.012*"machine" + 0.012*"year" + 0.012*"work" + 0.012*"team" + 0.011*"need" + 0.009*"customer" + 0.009*"technology" + 0.008*"solution" + 0.007*"application"
+2018-06-12 13:23:37,862 : INFO : topic diff=0.032209, rho=0.250000
+2018-06-12 13:23:38,180 : INFO : -7.253 per-word bound, 152.6 perplexity estimate based on a held-out corpus of 510 documents with 50969 words
+2018-06-12 13:23:38,180 : INFO : PROGRESS: pass 15, at document #510/510
+2018-06-12 13:23:38,366 : INFO : topic #2 (0.100): 0.019*"sql" + 0.014*"year" + 0.014*"need" + 0.010*"work" + 0.010*"strong" + 0.009*"working" + 0.009*"tableau" + 0.008*"etl" + 0.008*"solution" + 0.008*"team"
+2018-06-12 13:23:38,366 : INFO : topic #1 (0.100): 0.023*"project" + 0.012*"year" + 0.011*"passion" + 0.010*"skill" + 0.009*"teaching" + 0.008*"team" + 0.008*"quarter" + 0.008*"scientist" + 0.007*"course" + 0.007*"senior"
+2018-06-12 13:23:38,366 : INFO : topic #9 (0.100): 0.011*"need" + 0.011*"java" + 0.010*"product" + 0.010*"year" + 0.010*"technology" + 0.009*"cloud" + 0.009*"tool" + 0.009*"etc" + 0.009*"application" + 0.008*"team"
+2018-06-12 13:23:38,366 : INFO : topic #4 (0.100): 0.012*"learning" + 0.012*"machine" + 0.012*"work" + 0.012*"year" + 0.012*"team" + 0.011*"need" + 0.009*"customer" + 0.009*"technology" + 0.008*"solution" + 0.007*"application"
+2018-06-12 13:23:38,366 : INFO : topic #0 (0.100): 0.016*"team" + 0.013*"product" + 0.011*"need" + 0.010*"year" + 0.009*"work" + 0.007*"working" + 0.006*"new" + 0.006*"computer" + 0.006*"environment" + 0.006*"process"
+2018-06-12 13:23:38,366 : INFO : topic diff=0.027870, rho=0.242536
+2018-06-12 13:23:38,668 : INFO : -7.251 per-word bound, 152.3 perplexity estimate based on a held-out corpus of 510 documents with 50969 words
+2018-06-12 13:23:38,668 : INFO : PROGRESS: pass 16, at document #510/510
+2018-06-12 13:23:38,838 : INFO : topic #9 (0.100): 0.011*"need" + 0.011*"java" + 0.010*"product" + 0.010*"year" + 0.010*"technology" + 0.009*"cloud" + 0.009*"tool" + 0.009*"etc" + 0.009*"application" + 0.008*"team"
+2018-06-12 13:23:38,838 : INFO : topic #4 (0.100): 0.012*"learning" + 0.012*"machine" + 0.012*"work" + 0.012*"year" + 0.012*"team" + 0.011*"need" + 0.009*"customer" + 0.009*"technology" + 0.008*"solution" + 0.007*"company"
+2018-06-12 13:23:38,838 : INFO : topic #0 (0.100): 0.016*"team" + 0.013*"product" + 0.011*"need" + 0.010*"year" + 0.009*"work" + 0.007*"working" + 0.006*"new" + 0.006*"computer" + 0.006*"environment" + 0.006*"process"
+2018-06-12 13:23:38,839 : INFO : topic #3 (0.100): 0.018*"reporting" + 0.015*"financial" + 0.013*"project" + 0.012*"knowledge" + 0.010*"need" + 0.010*"user" + 0.009*"position" + 0.008*"process" + 0.008*"working" + 0.008*"application"
+2018-06-12 13:23:38,839 : INFO : topic #7 (0.100): 0.023*"learning" + 0.017*"machine" + 0.014*"work" + 0.012*"python" + 0.011*"need" + 0.010*"year" + 0.010*"team" + 0.008*"please" + 0.008*"big" + 0.007*"working"
+2018-06-12 13:23:38,839 : INFO : topic diff=0.024521, rho=0.235702
+2018-06-12 13:23:39,140 : INFO : -7.249 per-word bound, 152.1 perplexity estimate based on a held-out corpus of 510 documents with 50969 words
+2018-06-12 13:23:39,141 : INFO : PROGRESS: pass 17, at document #510/510
+2018-06-12 13:23:39,306 : INFO : topic #4 (0.100): 0.012*"learning" + 0.012*"machine" + 0.012*"work" + 0.012*"year" + 0.012*"team" + 0.011*"need" + 0.009*"customer" + 0.009*"technology" + 0.008*"solution" + 0.007*"company"
+2018-06-12 13:23:39,306 : INFO : topic #0 (0.100): 0.016*"team" + 0.013*"product" + 0.011*"need" + 0.010*"year" + 0.009*"work" + 0.007*"working" + 0.006*"new" + 0.006*"computer" + 0.006*"environment" + 0.006*"process"
+2018-06-12 13:23:39,307 : INFO : topic #2 (0.100): 0.020*"sql" + 0.014*"year" + 0.014*"need" + 0.010*"strong" + 0.010*"work" + 0.009*"working" + 0.009*"tableau" + 0.009*"etl" + 0.008*"solution" + 0.008*"team"
+2018-06-12 13:23:39,307 : INFO : topic #8 (0.100): 0.011*"application" + 0.011*"tool" + 0.010*"need" + 0.010*"knowledge" + 0.009*"team" + 0.007*"solution" + 0.007*"service" + 0.007*"project" + 0.007*"work" + 0.007*"client"
+2018-06-12 13:23:39,307 : INFO : topic #1 (0.100): 0.023*"project" + 0.012*"year" + 0.011*"passion" + 0.010*"skill" + 0.009*"teaching" + 0.008*"quarter" + 0.008*"team" + 0.008*"scientist" + 0.007*"course" + 0.007*"senior"
+2018-06-12 13:23:39,307 : INFO : topic diff=0.021831, rho=0.229416
+2018-06-12 13:23:39,607 : INFO : -7.247 per-word bound, 151.9 perplexity estimate based on a held-out corpus of 510 documents with 50969 words
+2018-06-12 13:23:39,607 : INFO : PROGRESS: pass 18, at document #510/510
+2018-06-12 13:23:39,784 : INFO : topic #1 (0.100): 0.023*"project" + 0.012*"year" + 0.011*"passion" + 0.010*"skill" + 0.009*"teaching" + 0.008*"quarter" + 0.008*"team" + 0.008*"scientist" + 0.007*"course" + 0.007*"senior"
+2018-06-12 13:23:39,784 : INFO : topic #9 (0.100): 0.011*"need" + 0.011*"java" + 0.010*"product" + 0.010*"year" + 0.010*"technology" + 0.009*"cloud" + 0.009*"tool" + 0.009*"etc" + 0.009*"application" + 0.008*"team"
+2018-06-12 13:23:39,784 : INFO : topic #8 (0.100): 0.011*"application" + 0.011*"tool" + 0.010*"need" + 0.010*"knowledge" + 0.008*"team" + 0.007*"solution" + 0.007*"service" + 0.007*"project" + 0.007*"work" + 0.007*"client"
+2018-06-12 13:23:39,784 : INFO : topic #0 (0.100): 0.016*"team" + 0.013*"product" + 0.011*"need" + 0.010*"year" + 0.010*"work" + 0.007*"working" + 0.006*"new" + 0.006*"computer" + 0.006*"environment" + 0.006*"process"
+2018-06-12 13:23:39,784 : INFO : topic #7 (0.100): 0.023*"learning" + 0.018*"machine" + 0.014*"work" + 0.012*"python" + 0.011*"need" + 0.010*"year" + 0.010*"team" + 0.008*"please" + 0.008*"big" + 0.007*"working"
+2018-06-12 13:23:39,784 : INFO : topic diff=0.019633, rho=0.223607
+2018-06-12 13:23:40,081 : INFO : -7.246 per-word bound, 151.8 perplexity estimate based on a held-out corpus of 510 documents with 50969 words
+2018-06-12 13:23:40,081 : INFO : PROGRESS: pass 19, at document #510/510
+2018-06-12 13:23:40,253 : INFO : topic #5 (0.100): 0.016*"plus" + 0.015*"performance" + 0.011*"knowledge" + 0.009*"need" + 0.007*"solution" + 0.007*"position" + 0.007*"year" + 0.006*"team" + 0.006*"ability" + 0.006*"field"
+2018-06-12 13:23:40,253 : INFO : topic #0 (0.100): 0.016*"team" + 0.013*"product" + 0.011*"need" + 0.010*"work" + 0.010*"year" + 0.007*"working" + 0.006*"new" + 0.006*"computer" + 0.006*"environment" + 0.006*"process"
+2018-06-12 13:23:40,253 : INFO : topic #9 (0.100): 0.011*"need" + 0.011*"java" + 0.010*"product" + 0.010*"year" + 0.010*"technology" + 0.009*"cloud" + 0.009*"tool" + 0.009*"etc" + 0.009*"application" + 0.008*"team"
+2018-06-12 13:23:40,254 : INFO : topic #3 (0.100): 0.018*"reporting" + 0.014*"financial" + 0.013*"project" + 0.012*"knowledge" + 0.010*"need" + 0.010*"user" + 0.009*"position" + 0.008*"process" + 0.008*"working" + 0.008*"application"
+2018-06-12 13:23:40,254 : INFO : topic #7 (0.100): 0.023*"learning" + 0.018*"machine" + 0.014*"work" + 0.012*"python" + 0.011*"need" + 0.010*"year" + 0.010*"team" + 0.008*"please" + 0.008*"big" + 0.007*"working"
+2018-06-12 13:23:40,254 : INFO : topic diff=0.017820, rho=0.218218
+2018-06-12 13:23:40,547 : INFO : -7.244 per-word bound, 151.6 perplexity estimate based on a held-out corpus of 510 documents with 50969 words
+2018-06-12 13:23:40,547 : INFO : PROGRESS: pass 20, at document #510/510
+2018-06-12 13:23:40,708 : INFO : topic #3 (0.100): 0.018*"reporting" + 0.014*"financial" + 0.013*"project" + 0.012*"knowledge" + 0.010*"need" + 0.010*"user" + 0.009*"position" + 0.008*"process" + 0.008*"working" + 0.008*"application"
+2018-06-12 13:23:40,709 : INFO : topic #7 (0.100): 0.023*"learning" + 0.018*"machine" + 0.014*"work" + 0.012*"python" + 0.011*"need" + 0.010*"year" + 0.010*"team" + 0.008*"please" + 0.008*"big" + 0.007*"working"
+2018-06-12 13:23:40,709 : INFO : topic #0 (0.100): 0.016*"team" + 0.013*"product" + 0.011*"need" + 0.010*"work" + 0.009*"year" + 0.007*"working" + 0.006*"new" + 0.006*"computer" + 0.006*"environment" + 0.006*"process"
+2018-06-12 13:23:40,709 : INFO : topic #6 (0.100): 0.018*"knowledge" + 0.010*"need" + 0.008*"solution" + 0.008*"java" + 0.008*"develop" + 0.007*"environment" + 0.007*"programming" + 0.007*"working" + 0.007*"network" + 0.007*"team"
+2018-06-12 13:23:40,709 : INFO : topic #2 (0.100): 0.021*"sql" + 0.015*"year" + 0.014*"need" + 0.010*"strong" + 0.009*"work" + 0.009*"tableau" + 0.009*"working" + 0.009*"etl" + 0.008*"solution" + 0.008*"intelligence"
+2018-06-12 13:23:40,709 : INFO : topic diff=0.016285, rho=0.213201
+2018-06-12 13:23:41,011 : INFO : -7.243 per-word bound, 151.5 perplexity estimate based on a held-out corpus of 510 documents with 50969 words
+2018-06-12 13:23:41,011 : INFO : PROGRESS: pass 21, at document #510/510
+2018-06-12 13:23:41,181 : INFO : topic #1 (0.100): 0.023*"project" + 0.012*"year" + 0.011*"passion" + 0.010*"skill" + 0.009*"teaching" + 0.008*"quarter" + 0.008*"scientist" + 0.008*"team" + 0.007*"course" + 0.007*"senior"
+2018-06-12 13:23:41,181 : INFO : topic #7 (0.100): 0.024*"learning" + 0.018*"machine" + 0.014*"work" + 0.012*"python" + 0.011*"need" + 0.010*"year" + 0.010*"team" + 0.008*"please" + 0.008*"big" + 0.007*"engineer"
+2018-06-12 13:23:41,181 : INFO : topic #6 (0.100): 0.018*"knowledge" + 0.010*"need" + 0.008*"solution" + 0.008*"develop" + 0.008*"java" + 0.008*"environment" + 0.007*"programming" + 0.007*"network" + 0.007*"working" + 0.007*"team"
+2018-06-12 13:23:41,181 : INFO : topic #5 (0.100): 0.016*"plus" + 0.015*"performance" + 0.011*"knowledge" + 0.009*"need" + 0.007*"solution" + 0.007*"position" + 0.007*"year" + 0.006*"team" + 0.006*"ability" + 0.006*"field"
+2018-06-12 13:23:41,181 : INFO : topic #4 (0.100): 0.012*"machine" + 0.012*"learning" + 0.012*"work" + 0.012*"year" + 0.012*"team" + 0.011*"need" + 0.009*"customer" + 0.009*"technology" + 0.008*"solution" + 0.007*"company"
+2018-06-12 13:23:41,181 : INFO : topic diff=0.015027, rho=0.208514
+2018-06-12 13:23:41,475 : INFO : -7.241 per-word bound, 151.3 perplexity estimate based on a held-out corpus of 510 documents with 50969 words
+2018-06-12 13:23:41,475 : INFO : PROGRESS: pass 22, at document #510/510
+2018-06-12 13:23:41,638 : INFO : topic #7 (0.100): 0.024*"learning" + 0.019*"machine" + 0.014*"work" + 0.012*"python" + 0.011*"need" + 0.010*"year" + 0.010*"team" + 0.008*"please" + 0.008*"big" + 0.007*"engineer"
+2018-06-12 13:23:41,639 : INFO : topic #5 (0.100): 0.016*"plus" + 0.015*"performance" + 0.011*"knowledge" + 0.009*"need" + 0.007*"solution" + 0.007*"position" + 0.007*"year" + 0.006*"team" + 0.006*"ability" + 0.006*"field"
+2018-06-12 13:23:41,639 : INFO : topic #1 (0.100): 0.023*"project" + 0.012*"year" + 0.011*"passion" + 0.010*"skill" + 0.009*"teaching" + 0.008*"quarter" + 0.008*"scientist" + 0.008*"team" + 0.007*"course" + 0.007*"senior"
+2018-06-12 13:23:41,639 : INFO : topic #2 (0.100): 0.021*"sql" + 0.015*"year" + 0.014*"need" + 0.010*"strong" + 0.009*"work" + 0.009*"tableau" + 0.009*"etl" + 0.009*"working" + 0.008*"solution" + 0.008*"intelligence"
+2018-06-12 13:23:41,639 : INFO : topic #0 (0.100): 0.016*"team" + 0.013*"product" + 0.011*"need" + 0.010*"work" + 0.009*"year" + 0.007*"working" + 0.006*"new" + 0.006*"computer" + 0.006*"environment" + 0.006*"process"
+2018-06-12 13:23:41,639 : INFO : topic diff=0.013946, rho=0.204124
+2018-06-12 13:23:41,952 : INFO : -7.240 per-word bound, 151.2 perplexity estimate based on a held-out corpus of 510 documents with 50969 words
+2018-06-12 13:23:41,952 : INFO : PROGRESS: pass 23, at document #510/510
+2018-06-12 13:23:42,116 : INFO : topic #2 (0.100): 0.021*"sql" + 0.015*"year" + 0.014*"need" + 0.010*"strong" + 0.009*"tableau" + 0.009*"work" + 0.009*"etl" + 0.009*"working" + 0.008*"solution" + 0.008*"intelligence"
+2018-06-12 13:23:42,116 : INFO : topic #6 (0.100): 0.018*"knowledge" + 0.010*"need" + 0.008*"solution" + 0.008*"develop" + 0.008*"java" + 0.008*"environment" + 0.007*"programming" + 0.007*"network" + 0.007*"working" + 0.007*"application"
+2018-06-12 13:23:42,116 : INFO : topic #7 (0.100): 0.024*"learning" + 0.019*"machine" + 0.014*"work" + 0.012*"python" + 0.011*"need" + 0.010*"year" + 0.010*"team" + 0.009*"please" + 0.008*"big" + 0.007*"engineer"
+2018-06-12 13:23:42,116 : INFO : topic #0 (0.100): 0.016*"team" + 0.013*"product" + 0.011*"need" + 0.010*"work" + 0.009*"year" + 0.007*"working" + 0.006*"new" + 0.006*"computer" + 0.006*"environment" + 0.006*"process"
+2018-06-12 13:23:42,116 : INFO : topic #5 (0.100): 0.016*"plus" + 0.015*"performance" + 0.011*"knowledge" + 0.009*"need" + 0.007*"solution" + 0.007*"position" + 0.007*"year" + 0.006*"team" + 0.006*"ability" + 0.006*"field"
+2018-06-12 13:23:42,116 : INFO : topic diff=0.013022, rho=0.200000
+2018-06-12 13:23:42,426 : INFO : -7.239 per-word bound, 151.1 perplexity estimate based on a held-out corpus of 510 documents with 50969 words
+2018-06-12 13:23:42,427 : INFO : PROGRESS: pass 24, at document #510/510
+2018-06-12 13:23:42,592 : INFO : topic #8 (0.100): 0.012*"application" + 0.011*"tool" + 0.010*"need" + 0.010*"knowledge" + 0.008*"team" + 0.008*"solution" + 0.007*"service" + 0.007*"client" + 0.007*"work" + 0.007*"project"
+2018-06-12 13:23:42,592 : INFO : topic #1 (0.100): 0.023*"project" + 0.012*"year" + 0.011*"passion" + 0.010*"skill" + 0.010*"teaching" + 0.008*"quarter" + 0.008*"scientist" + 0.008*"team" + 0.007*"course" + 0.007*"senior"
+2018-06-12 13:23:42,592 : INFO : topic #4 (0.100): 0.012*"work" + 0.012*"machine" + 0.012*"learning" + 0.011*"team" + 0.011*"year" + 0.011*"need" + 0.009*"customer" + 0.009*"technology" + 0.008*"solution" + 0.007*"company"
+2018-06-12 13:23:42,592 : INFO : topic #0 (0.100): 0.016*"team" + 0.013*"product" + 0.011*"need" + 0.010*"work" + 0.009*"year" + 0.007*"working" + 0.006*"computer" + 0.006*"new" + 0.006*"environment" + 0.006*"process"
+2018-06-12 13:23:42,592 : INFO : topic #9 (0.100): 0.011*"need" + 0.011*"java" + 0.010*"product" + 0.010*"year" + 0.010*"technology" + 0.010*"cloud" + 0.009*"tool" + 0.009*"application" + 0.009*"etc" + 0.008*"team"
+2018-06-12 13:23:42,592 : INFO : topic diff=0.012189, rho=0.196116
+2018-06-12 13:23:42,883 : INFO : -7.238 per-word bound, 150.9 perplexity estimate based on a held-out corpus of 510 documents with 50969 words
+2018-06-12 13:23:42,883 : INFO : PROGRESS: pass 25, at document #510/510
+2018-06-12 13:23:43,044 : INFO : topic #3 (0.100): 0.018*"reporting" + 0.014*"financial" + 0.014*"project" + 0.012*"knowledge" + 0.010*"need" + 0.010*"user" + 0.009*"position" + 0.008*"process" + 0.008*"working" + 0.008*"application"
+2018-06-12 13:23:43,044 : INFO : topic #4 (0.100): 0.012*"work" + 0.012*"machine" + 0.012*"learning" + 0.011*"team" + 0.011*"year" + 0.011*"need" + 0.009*"customer" + 0.009*"technology" + 0.008*"solution" + 0.007*"company"
+2018-06-12 13:23:43,044 : INFO : topic #6 (0.100): 0.018*"knowledge" + 0.010*"need" + 0.008*"solution" + 0.008*"develop" + 0.008*"java" + 0.008*"environment" + 0.007*"programming" + 0.007*"network" + 0.007*"working" + 0.007*"application"
+2018-06-12 13:23:43,044 : INFO : topic #9 (0.100): 0.011*"need" + 0.011*"java" + 0.010*"product" + 0.010*"year" + 0.010*"technology" + 0.010*"cloud" + 0.009*"tool" + 0.009*"application" + 0.009*"etc" + 0.008*"team"
+2018-06-12 13:23:43,044 : INFO : topic #8 (0.100): 0.012*"application" + 0.011*"tool" + 0.010*"need" + 0.010*"knowledge" + 0.008*"team" + 0.008*"solution" + 0.007*"service" + 0.007*"client" + 0.007*"work" + 0.007*"project"
+2018-06-12 13:23:43,044 : INFO : topic diff=0.011426, rho=0.192450
+2018-06-12 13:23:43,333 : INFO : -7.237 per-word bound, 150.8 perplexity estimate based on a held-out corpus of 510 documents with 50969 words
+2018-06-12 13:23:43,334 : INFO : PROGRESS: pass 26, at document #510/510
+2018-06-12 13:23:43,494 : INFO : topic #6 (0.100): 0.018*"knowledge" + 0.010*"need" + 0.008*"solution" + 0.008*"develop" + 0.008*"java" + 0.008*"environment" + 0.007*"programming" + 0.007*"network" + 0.007*"working" + 0.007*"application"
+2018-06-12 13:23:43,494 : INFO : topic #3 (0.100): 0.018*"reporting" + 0.014*"project" + 0.014*"financial" + 0.012*"knowledge" + 0.010*"need" + 0.010*"user" + 0.009*"position" + 0.008*"process" + 0.008*"working" + 0.008*"application"
+2018-06-12 13:23:43,494 : INFO : topic #2 (0.100): 0.022*"sql" + 0.016*"year" + 0.015*"need" + 0.010*"tableau" + 0.010*"etl" + 0.009*"strong" + 0.009*"work" + 0.009*"working" + 0.008*"intelligence" + 0.008*"solution"
+2018-06-12 13:23:43,494 : INFO : topic #7 (0.100): 0.024*"learning" + 0.019*"machine" + 0.014*"work" + 0.012*"python" + 0.011*"need" + 0.010*"year" + 0.010*"team" + 0.009*"please" + 0.008*"big" + 0.007*"engineer"
+2018-06-12 13:23:43,494 : INFO : topic #0 (0.100): 0.017*"team" + 0.014*"product" + 0.011*"need" + 0.010*"work" + 0.009*"year" + 0.007*"working" + 0.006*"computer" + 0.006*"new" + 0.006*"environment" + 0.006*"process"
+2018-06-12 13:23:43,494 : INFO : topic diff=0.010745, rho=0.188982
+2018-06-12 13:23:43,782 : INFO : -7.236 per-word bound, 150.7 perplexity estimate based on a held-out corpus of 510 documents with 50969 words
+2018-06-12 13:23:43,782 : INFO : PROGRESS: pass 27, at document #510/510
+2018-06-12 13:23:43,943 : INFO : topic #1 (0.100): 0.023*"project" + 0.012*"year" + 0.011*"passion" + 0.010*"skill" + 0.010*"teaching" + 0.009*"quarter" + 0.008*"scientist" + 0.008*"team" + 0.008*"course" + 0.007*"senior"
+2018-06-12 13:23:43,943 : INFO : topic #2 (0.100): 0.022*"sql" + 0.016*"year" + 0.015*"need" + 0.010*"tableau" + 0.010*"etl" + 0.009*"strong" + 0.009*"work" + 0.009*"working" + 0.008*"intelligence" + 0.008*"solution"
+2018-06-12 13:23:43,943 : INFO : topic #5 (0.100): 0.016*"plus" + 0.015*"performance" + 0.011*"knowledge" + 0.009*"need" + 0.007*"solution" + 0.007*"position" + 0.007*"year" + 0.006*"team" + 0.006*"ability" + 0.006*"field"
+2018-06-12 13:23:43,943 : INFO : topic #9 (0.100): 0.011*"need" + 0.011*"java" + 0.010*"year" + 0.010*"product" + 0.010*"technology" + 0.010*"cloud" + 0.009*"application" + 0.009*"tool" + 0.009*"etc" + 0.008*"team"
+2018-06-12 13:23:43,944 : INFO : topic #6 (0.100): 0.018*"knowledge" + 0.010*"need" + 0.008*"solution" + 0.008*"develop" + 0.008*"java" + 0.008*"environment" + 0.007*"programming" + 0.007*"network" + 0.007*"application" + 0.007*"working"
+2018-06-12 13:23:43,944 : INFO : topic diff=0.010155, rho=0.185695
+2018-06-12 13:23:44,239 : INFO : -7.235 per-word bound, 150.6 perplexity estimate based on a held-out corpus of 510 documents with 50969 words
+2018-06-12 13:23:44,239 : INFO : PROGRESS: pass 28, at document #510/510
+2018-06-12 13:23:44,399 : INFO : topic #1 (0.100): 0.023*"project" + 0.012*"year" + 0.011*"passion" + 0.010*"skill" + 0.010*"teaching" + 0.009*"quarter" + 0.008*"scientist" + 0.008*"team" + 0.008*"course" + 0.007*"senior"
+2018-06-12 13:23:44,399 : INFO : topic #4 (0.100): 0.012*"work" + 0.012*"machine" + 0.011*"team" + 0.011*"year" + 0.011*"learning" + 0.011*"need" + 0.010*"customer" + 0.009*"technology" + 0.008*"solution" + 0.007*"company"
+2018-06-12 13:23:44,399 : INFO : topic #0 (0.100): 0.017*"team" + 0.014*"product" + 0.011*"need" + 0.010*"work" + 0.009*"year" + 0.007*"working" + 0.006*"computer" + 0.006*"new" + 0.006*"environment" + 0.006*"process"
+2018-06-12 13:23:44,399 : INFO : topic #3 (0.100): 0.018*"reporting" + 0.014*"project" + 0.014*"financial" + 0.012*"knowledge" + 0.010*"need" + 0.010*"user" + 0.009*"position" + 0.008*"process" + 0.008*"working" + 0.008*"application"
+2018-06-12 13:23:44,400 : INFO : topic #6 (0.100): 0.018*"knowledge" + 0.010*"need" + 0.008*"solution" + 0.008*"develop" + 0.008*"java" + 0.008*"environment" + 0.007*"programming" + 0.007*"network" + 0.007*"application" + 0.007*"working"
+2018-06-12 13:23:44,400 : INFO : topic diff=0.009645, rho=0.182574
+2018-06-12 13:23:44,685 : INFO : -7.234 per-word bound, 150.5 perplexity estimate based on a held-out corpus of 510 documents with 50969 words
+2018-06-12 13:23:44,686 : INFO : PROGRESS: pass 29, at document #510/510
+2018-06-12 13:23:44,844 : INFO : topic #5 (0.100): 0.016*"plus" + 0.015*"performance" + 0.011*"knowledge" + 0.009*"need" + 0.007*"solution" + 0.007*"position" + 0.007*"year" + 0.006*"team" + 0.006*"ability" + 0.006*"field"
+2018-06-12 13:23:44,844 : INFO : topic #6 (0.100): 0.018*"knowledge" + 0.010*"need" + 0.008*"solution" + 0.008*"develop" + 0.008*"java" + 0.008*"environment" + 0.007*"programming" + 0.007*"network" + 0.007*"application" + 0.007*"working"
+2018-06-12 13:23:44,844 : INFO : topic #8 (0.100): 0.012*"application" + 0.011*"tool" + 0.010*"need" + 0.010*"knowledge" + 0.008*"team" + 0.008*"solution" + 0.007*"service" + 0.007*"client" + 0.007*"work" + 0.007*"project"
+2018-06-12 13:23:44,844 : INFO : topic #4 (0.100): 0.012*"work" + 0.012*"machine" + 0.011*"team" + 0.011*"year" + 0.011*"learning" + 0.011*"need" + 0.010*"customer" + 0.008*"technology" + 0.008*"solution" + 0.007*"company"
+2018-06-12 13:23:44,845 : INFO : topic #0 (0.100): 0.017*"team" + 0.014*"product" + 0.011*"need" + 0.010*"work" + 0.009*"year" + 0.007*"working" + 0.006*"computer" + 0.006*"new" + 0.006*"environment" + 0.006*"process"
+2018-06-12 13:23:44,845 : INFO : topic diff=0.009184, rho=0.179605
+2018-06-12 13:23:45,134 : INFO : -7.233 per-word bound, 150.5 perplexity estimate based on a held-out corpus of 510 documents with 50969 words
+2018-06-12 13:23:45,134 : INFO : PROGRESS: pass 30, at document #510/510
+2018-06-12 13:23:45,300 : INFO : topic #1 (0.100): 0.023*"project" + 0.012*"year" + 0.011*"passion" + 0.010*"skill" + 0.010*"teaching" + 0.009*"quarter" + 0.008*"scientist" + 0.008*"team" + 0.008*"course" + 0.007*"senior"
+2018-06-12 13:23:45,300 : INFO : topic #7 (0.100): 0.025*"learning" + 0.020*"machine" + 0.014*"work" + 0.012*"python" + 0.011*"need" + 0.010*"year" + 0.010*"team" + 0.009*"please" + 0.008*"big" + 0.008*"engineer"
+2018-06-12 13:23:45,300 : INFO : topic #5 (0.100): 0.016*"plus" + 0.015*"performance" + 0.011*"knowledge" + 0.009*"need" + 0.007*"solution" + 0.007*"position" + 0.007*"year" + 0.006*"team" + 0.006*"ability" + 0.006*"field"
+2018-06-12 13:23:45,300 : INFO : topic #4 (0.100): 0.012*"work" + 0.011*"machine" + 0.011*"team" + 0.011*"year" + 0.011*"learning" + 0.011*"need" + 0.010*"customer" + 0.008*"technology" + 0.008*"solution" + 0.007*"company"
+2018-06-12 13:23:45,300 : INFO : topic #8 (0.100): 0.012*"application" + 0.011*"tool" + 0.010*"need" + 0.010*"knowledge" + 0.008*"team" + 0.008*"solution" + 0.007*"service" + 0.007*"client" + 0.007*"work" + 0.007*"project"
+2018-06-12 13:23:45,301 : INFO : topic diff=0.008768, rho=0.176777
+2018-06-12 13:23:45,587 : INFO : -7.232 per-word bound, 150.4 perplexity estimate based on a held-out corpus of 510 documents with 50969 words
+2018-06-12 13:23:45,588 : INFO : PROGRESS: pass 31, at document #510/510
+2018-06-12 13:23:45,746 : INFO : topic #5 (0.100): 0.016*"plus" + 0.015*"performance" + 0.012*"knowledge" + 0.009*"need" + 0.007*"solution" + 0.007*"year" + 0.007*"position" + 0.006*"team" + 0.006*"ability" + 0.006*"field"
+2018-06-12 13:23:45,746 : INFO : topic #4 (0.100): 0.012*"work" + 0.011*"machine" + 0.011*"team" + 0.011*"year" + 0.011*"learning" + 0.011*"need" + 0.010*"customer" + 0.008*"technology" + 0.008*"solution" + 0.007*"company"
+2018-06-12 13:23:45,746 : INFO : topic #7 (0.100): 0.025*"learning" + 0.020*"machine" + 0.014*"work" + 0.013*"python" + 0.011*"need" + 0.010*"year" + 0.010*"team" + 0.009*"please" + 0.008*"big" + 0.008*"engineer"
+2018-06-12 13:23:45,746 : INFO : topic #1 (0.100): 0.023*"project" + 0.012*"year" + 0.011*"passion" + 0.010*"skill" + 0.010*"teaching" + 0.009*"quarter" + 0.008*"scientist" + 0.008*"team" + 0.008*"course" + 0.007*"senior"
+2018-06-12 13:23:45,746 : INFO : topic #9 (0.100): 0.011*"need" + 0.011*"java" + 0.011*"year" + 0.010*"product" + 0.010*"technology" + 0.010*"cloud" + 0.009*"application" + 0.009*"tool" + 0.009*"etc" + 0.008*"team"
+2018-06-12 13:23:45,746 : INFO : topic diff=0.008375, rho=0.174078
+2018-06-12 13:23:46,032 : INFO : -7.232 per-word bound, 150.3 perplexity estimate based on a held-out corpus of 510 documents with 50969 words
+2018-06-12 13:23:46,032 : INFO : PROGRESS: pass 32, at document #510/510
+2018-06-12 13:23:46,188 : INFO : topic #4 (0.100): 0.012*"work" + 0.011*"team" + 0.011*"machine" + 0.011*"year" + 0.011*"learning" + 0.011*"need" + 0.010*"customer" + 0.008*"technology" + 0.008*"solution" + 0.007*"company"
+2018-06-12 13:23:46,188 : INFO : topic #2 (0.100): 0.023*"sql" + 0.016*"year" + 0.015*"need" + 0.010*"etl" + 0.010*"tableau" + 0.009*"strong" + 0.009*"work" + 0.009*"working" + 0.009*"intelligence" + 0.008*"solution"
+2018-06-12 13:23:46,188 : INFO : topic #3 (0.100): 0.018*"reporting" + 0.015*"project" + 0.014*"financial" + 0.012*"knowledge" + 0.010*"need" + 0.010*"user" + 0.009*"position" + 0.009*"process" + 0.008*"working" + 0.007*"application"
+2018-06-12 13:23:46,188 : INFO : topic #6 (0.100): 0.019*"knowledge" + 0.010*"need" + 0.008*"solution" + 0.008*"develop" + 0.008*"java" + 0.008*"environment" + 0.007*"programming" + 0.007*"network" + 0.007*"application" + 0.007*"working"
+2018-06-12 13:23:46,188 : INFO : topic #1 (0.100): 0.023*"project" + 0.012*"year" + 0.012*"passion" + 0.010*"skill" + 0.010*"teaching" + 0.009*"quarter" + 0.009*"scientist" + 0.008*"team" + 0.008*"course" + 0.007*"senior"
+2018-06-12 13:23:46,188 : INFO : topic diff=0.008003, rho=0.171499
+2018-06-12 13:23:46,485 : INFO : -7.231 per-word bound, 150.2 perplexity estimate based on a held-out corpus of 510 documents with 50969 words
+2018-06-12 13:23:46,485 : INFO : PROGRESS: pass 33, at document #510/510
+2018-06-12 13:23:46,649 : INFO : topic #5 (0.100): 0.016*"plus" + 0.015*"performance" + 0.012*"knowledge" + 0.009*"need" + 0.007*"solution" + 0.007*"year" + 0.006*"position" + 0.006*"team" + 0.006*"ability" + 0.006*"field"
+2018-06-12 13:23:46,649 : INFO : topic #6 (0.100): 0.019*"knowledge" + 0.010*"need" + 0.008*"solution" + 0.008*"develop" + 0.008*"java" + 0.008*"environment" + 0.007*"programming" + 0.007*"network" + 0.007*"application" + 0.007*"working"
+2018-06-12 13:23:46,649 : INFO : topic #2 (0.100): 0.023*"sql" + 0.016*"year" + 0.015*"need" + 0.010*"etl" + 0.010*"tableau" + 0.009*"strong" + 0.009*"working" + 0.009*"work" + 0.009*"intelligence" + 0.008*"solution"
+2018-06-12 13:23:46,649 : INFO : topic #7 (0.100): 0.025*"learning" + 0.020*"machine" + 0.014*"work" + 0.013*"python" + 0.011*"need" + 0.010*"year" + 0.010*"team" + 0.009*"please" + 0.008*"big" + 0.008*"scientist"
+2018-06-12 13:23:46,649 : INFO : topic #3 (0.100): 0.018*"reporting" + 0.015*"project" + 0.014*"financial" + 0.012*"knowledge" + 0.010*"need" + 0.010*"user" + 0.009*"position" + 0.009*"process" + 0.008*"working" + 0.007*"application"
+2018-06-12 13:23:46,650 : INFO : topic diff=0.007647, rho=0.169031
+2018-06-12 13:23:46,993 : INFO : -7.230 per-word bound, 150.2 perplexity estimate based on a held-out corpus of 510 documents with 50969 words
+2018-06-12 13:23:46,993 : INFO : PROGRESS: pass 34, at document #510/510
+2018-06-12 13:23:47,170 : INFO : topic #4 (0.100): 0.012*"work" + 0.011*"team" + 0.011*"year" + 0.011*"machine" + 0.011*"learning" + 0.011*"need" + 0.010*"customer" + 0.008*"technology" + 0.008*"solution" + 0.007*"company"
+2018-06-12 13:23:47,170 : INFO : topic #9 (0.100): 0.011*"need" + 0.011*"java" + 0.011*"year" + 0.010*"product" + 0.010*"technology" + 0.010*"cloud" + 0.009*"application" + 0.009*"tool" + 0.009*"etc" + 0.008*"team"
+2018-06-12 13:23:47,171 : INFO : topic #3 (0.100): 0.018*"reporting" + 0.015*"project" + 0.014*"financial" + 0.012*"knowledge" + 0.010*"need" + 0.010*"user" + 0.009*"position" + 0.009*"process" + 0.008*"working" + 0.007*"application"
+2018-06-12 13:23:47,171 : INFO : topic #8 (0.100): 0.012*"application" + 0.011*"tool" + 0.010*"knowledge" + 0.009*"need" + 0.008*"team" + 0.008*"solution" + 0.007*"service" + 0.007*"client" + 0.007*"work" + 0.007*"project"
+2018-06-12 13:23:47,171 : INFO : topic #2 (0.100): 0.023*"sql" + 0.016*"year" + 0.015*"need" + 0.010*"etl" + 0.010*"tableau" + 0.009*"working" + 0.009*"strong" + 0.009*"work" + 0.009*"intelligence" + 0.008*"solution"
+2018-06-12 13:23:47,171 : INFO : topic diff=0.007315, rho=0.166667
+2018-06-12 13:23:47,530 : INFO : -7.230 per-word bound, 150.1 perplexity estimate based on a held-out corpus of 510 documents with 50969 words
+2018-06-12 13:23:47,530 : INFO : PROGRESS: pass 35, at document #510/510
+2018-06-12 13:23:47,696 : INFO : topic #4 (0.100): 0.012*"work" + 0.011*"team" + 0.011*"year" + 0.011*"machine" + 0.011*"learning" + 0.011*"need" + 0.010*"customer" + 0.008*"technology" + 0.008*"solution" + 0.007*"company"
+2018-06-12 13:23:47,696 : INFO : topic #0 (0.100): 0.017*"team" + 0.014*"product" + 0.010*"need" + 0.010*"work" + 0.009*"year" + 0.007*"working" + 0.007*"computer" + 0.006*"new" + 0.006*"process" + 0.006*"environment"
+2018-06-12 13:23:47,697 : INFO : topic #6 (0.100): 0.019*"knowledge" + 0.010*"need" + 0.008*"solution" + 0.008*"develop" + 0.008*"java" + 0.008*"environment" + 0.007*"programming" + 0.007*"network" + 0.007*"application" + 0.007*"working"
+2018-06-12 13:23:47,697 : INFO : topic #1 (0.100): 0.023*"project" + 0.012*"year" + 0.012*"passion" + 0.010*"skill" + 0.010*"teaching" + 0.009*"quarter" + 0.009*"scientist" + 0.008*"team" + 0.008*"course" + 0.008*"senior"
+2018-06-12 13:23:47,697 : INFO : topic #2 (0.100): 0.023*"sql" + 0.016*"year" + 0.015*"need" + 0.010*"etl" + 0.010*"tableau" + 0.009*"working" + 0.009*"work" + 0.009*"strong" + 0.009*"intelligence" + 0.008*"database"
+2018-06-12 13:23:47,697 : INFO : topic diff=0.007060, rho=0.164399
+2018-06-12 13:23:48,081 : INFO : -7.229 per-word bound, 150.0 perplexity estimate based on a held-out corpus of 510 documents with 50969 words
+2018-06-12 13:23:48,082 : INFO : PROGRESS: pass 36, at document #510/510
+2018-06-12 13:23:48,307 : INFO : topic #7 (0.100): 0.025*"learning" + 0.020*"machine" + 0.014*"work" + 0.013*"python" + 0.011*"need" + 0.010*"year" + 0.010*"team" + 0.009*"please" + 0.008*"big" + 0.008*"scientist"
+2018-06-12 13:23:48,307 : INFO : topic #0 (0.100): 0.017*"team" + 0.014*"product" + 0.010*"need" + 0.010*"work" + 0.009*"year" + 0.007*"working" + 0.007*"computer" + 0.006*"new" + 0.006*"process" + 0.006*"environment"
+2018-06-12 13:23:48,308 : INFO : topic #4 (0.100): 0.012*"work" + 0.011*"team" + 0.011*"year" + 0.011*"machine" + 0.011*"learning" + 0.011*"need" + 0.010*"customer" + 0.008*"technology" + 0.008*"solution" + 0.007*"company"
+2018-06-12 13:23:48,308 : INFO : topic #1 (0.100): 0.022*"project" + 0.012*"year" + 0.012*"passion" + 0.010*"skill" + 0.010*"teaching" + 0.009*"quarter" + 0.009*"scientist" + 0.008*"team" + 0.008*"course" + 0.008*"senior"
+2018-06-12 13:23:48,309 : INFO : topic #2 (0.100): 0.023*"sql" + 0.016*"year" + 0.015*"need" + 0.010*"etl" + 0.010*"tableau" + 0.009*"working" + 0.009*"work" + 0.009*"strong" + 0.009*"intelligence" + 0.008*"database"
+2018-06-12 13:23:48,310 : INFO : topic diff=0.006781, rho=0.162221
+2018-06-12 13:23:49,256 : INFO : -7.228 per-word bound, 150.0 perplexity estimate based on a held-out corpus of 510 documents with 50969 words
+2018-06-12 13:23:49,256 : INFO : PROGRESS: pass 37, at document #510/510
+2018-06-12 13:23:49,519 : INFO : topic #6 (0.100): 0.019*"knowledge" + 0.010*"need" + 0.008*"solution" + 0.008*"develop" + 0.008*"environment" + 0.008*"java" + 0.007*"programming" + 0.007*"network" + 0.007*"application" + 0.007*"developing"
+2018-06-12 13:23:49,519 : INFO : topic #1 (0.100): 0.022*"project" + 0.012*"year" + 0.012*"passion" + 0.010*"skill" + 0.010*"teaching" + 0.009*"quarter" + 0.009*"scientist" + 0.008*"team" + 0.008*"course" + 0.008*"senior"
+2018-06-12 13:23:49,520 : INFO : topic #0 (0.100): 0.017*"team" + 0.014*"product" + 0.010*"need" + 0.010*"work" + 0.009*"year" + 0.007*"working" + 0.007*"computer" + 0.006*"new" + 0.006*"process" + 0.006*"environment"
+2018-06-12 13:23:49,520 : INFO : topic #2 (0.100): 0.023*"sql" + 0.016*"year" + 0.015*"need" + 0.010*"etl" + 0.010*"tableau" + 0.009*"working" + 0.009*"work" + 0.009*"strong" + 0.009*"intelligence" + 0.008*"database"
+2018-06-12 13:23:49,520 : INFO : topic #3 (0.100): 0.018*"reporting" + 0.015*"project" + 0.014*"financial" + 0.012*"knowledge" + 0.010*"need" + 0.010*"user" + 0.009*"position" + 0.009*"process" + 0.008*"working" + 0.007*"analyst"
+2018-06-12 13:23:49,520 : INFO : topic diff=0.006489, rho=0.160128
+2018-06-12 13:23:49,965 : INFO : -7.228 per-word bound, 149.9 perplexity estimate based on a held-out corpus of 510 documents with 50969 words
+2018-06-12 13:23:49,966 : INFO : PROGRESS: pass 38, at document #510/510
+2018-06-12 13:23:50,293 : INFO : topic #3 (0.100): 0.018*"reporting" + 0.015*"project" + 0.014*"financial" + 0.012*"knowledge" + 0.010*"need" + 0.010*"user" + 0.009*"position" + 0.009*"process" + 0.008*"working" + 0.007*"analyst"
+2018-06-12 13:23:50,294 : INFO : topic #1 (0.100): 0.022*"project" + 0.012*"year" + 0.012*"passion" + 0.010*"skill" + 0.010*"teaching" + 0.009*"quarter" + 0.009*"scientist" + 0.008*"team" + 0.008*"course" + 0.008*"senior"
+2018-06-12 13:23:50,295 : INFO : topic #7 (0.100): 0.025*"learning" + 0.021*"machine" + 0.013*"work" + 0.013*"python" + 0.012*"need" + 0.010*"year" + 0.010*"team" + 0.009*"please" + 0.008*"big" + 0.008*"scientist"
+2018-06-12 13:23:50,295 : INFO : topic #9 (0.100): 0.011*"need" + 0.011*"java" + 0.011*"year" + 0.010*"product" + 0.010*"technology" + 0.010*"cloud" + 0.009*"application" + 0.009*"tool" + 0.009*"etc" + 0.008*"team"
+2018-06-12 13:23:50,295 : INFO : topic #5 (0.100): 0.016*"plus" + 0.015*"performance" + 0.012*"knowledge" + 0.009*"need" + 0.007*"solution" + 0.007*"year" + 0.006*"position" + 0.006*"team" + 0.006*"ability" + 0.006*"field"
+2018-06-12 13:23:50,296 : INFO : topic diff=0.006235, rho=0.158114
+2018-06-12 13:23:50,970 : INFO : -7.227 per-word bound, 149.8 perplexity estimate based on a held-out corpus of 510 documents with 50969 words
+2018-06-12 13:23:50,970 : INFO : PROGRESS: pass 39, at document #510/510
+2018-06-12 13:23:51,272 : INFO : topic #1 (0.100): 0.022*"project" + 0.012*"year" + 0.012*"passion" + 0.010*"skill" + 0.010*"teaching" + 0.009*"quarter" + 0.009*"scientist" + 0.008*"team" + 0.008*"course" + 0.008*"senior"
+2018-06-12 13:23:51,272 : INFO : topic #9 (0.100): 0.011*"need" + 0.011*"java" + 0.011*"year" + 0.010*"product" + 0.010*"technology" + 0.010*"cloud" + 0.009*"application" + 0.009*"tool" + 0.009*"etc" + 0.008*"team"
+2018-06-12 13:23:51,272 : INFO : topic #8 (0.100): 0.012*"application" + 0.011*"tool" + 0.009*"knowledge" + 0.009*"need" + 0.008*"team" + 0.008*"solution" + 0.007*"service" + 0.007*"client" + 0.007*"integration" + 0.007*"infrastructure"
+2018-06-12 13:23:51,272 : INFO : topic #7 (0.100): 0.025*"learning" + 0.021*"machine" + 0.013*"work" + 0.013*"python" + 0.012*"need" + 0.010*"year" + 0.010*"team" + 0.009*"please" + 0.008*"big" + 0.008*"scientist"
+2018-06-12 13:23:51,272 : INFO : topic #0 (0.100): 0.017*"team" + 0.014*"product" + 0.010*"need" + 0.010*"work" + 0.009*"year" + 0.007*"working" + 0.007*"computer" + 0.006*"new" + 0.006*"process" + 0.006*"environment"
+2018-06-12 13:23:51,272 : INFO : topic diff=0.005998, rho=0.156174
+2018-06-12 13:23:51,788 : INFO : -7.227 per-word bound, 149.8 perplexity estimate based on a held-out corpus of 510 documents with 50969 words
+2018-06-12 13:23:51,788 : INFO : PROGRESS: pass 40, at document #510/510
+2018-06-12 13:23:52,068 : INFO : topic #4 (0.100): 0.012*"work" + 0.011*"team" + 0.011*"year" + 0.011*"machine" + 0.011*"need" + 0.011*"learning" + 0.010*"customer" + 0.008*"technology" + 0.008*"solution" + 0.007*"company"
+2018-06-12 13:23:52,068 : INFO : topic #2 (0.100): 0.023*"sql" + 0.017*"year" + 0.015*"need" + 0.011*"etl" + 0.010*"tableau" + 0.009*"working" + 0.009*"work" + 0.009*"intelligence" + 0.009*"strong" + 0.009*"database"
+2018-06-12 13:23:52,068 : INFO : topic #5 (0.100): 0.016*"plus" + 0.015*"performance" + 0.012*"knowledge" + 0.009*"need" + 0.007*"solution" + 0.007*"year" + 0.006*"position" + 0.006*"team" + 0.006*"ability" + 0.006*"field"
+2018-06-12 13:23:52,068 : INFO : topic #1 (0.100): 0.022*"project" + 0.012*"year" + 0.012*"passion" + 0.010*"skill" + 0.010*"teaching" + 0.009*"quarter" + 0.009*"scientist" + 0.008*"team" + 0.008*"course" + 0.008*"senior"
+2018-06-12 13:23:52,069 : INFO : topic #7 (0.100): 0.025*"learning" + 0.021*"machine" + 0.013*"work" + 0.013*"python" + 0.012*"need" + 0.010*"year" + 0.010*"team" + 0.009*"please" + 0.008*"big" + 0.008*"scientist"
+2018-06-12 13:23:52,069 : INFO : topic diff=0.005753, rho=0.154303
+2018-06-12 13:23:52,459 : INFO : -7.226 per-word bound, 149.7 perplexity estimate based on a held-out corpus of 510 documents with 50969 words
+2018-06-12 13:23:52,459 : INFO : PROGRESS: pass 41, at document #510/510
+2018-06-12 13:23:52,672 : INFO : topic #4 (0.100): 0.012*"work" + 0.011*"team" + 0.011*"year" + 0.011*"machine" + 0.011*"need" + 0.011*"learning" + 0.010*"customer" + 0.008*"technology" + 0.008*"solution" + 0.007*"company"
+2018-06-12 13:23:52,672 : INFO : topic #6 (0.100): 0.019*"knowledge" + 0.009*"need" + 0.008*"solution" + 0.008*"develop" + 0.008*"environment" + 0.008*"java" + 0.007*"programming" + 0.007*"network" + 0.007*"application" + 0.007*"platform"
+2018-06-12 13:23:52,672 : INFO : topic #3 (0.100): 0.017*"reporting" + 0.015*"project" + 0.014*"financial" + 0.012*"knowledge" + 0.010*"need" + 0.010*"user" + 0.009*"position" + 0.009*"process" + 0.008*"working" + 0.008*"analyst"
+2018-06-12 13:23:52,673 : INFO : topic #8 (0.100): 0.012*"application" + 0.011*"tool" + 0.009*"knowledge" + 0.009*"need" + 0.008*"team" + 0.008*"solution" + 0.007*"service" + 0.007*"client" + 0.007*"integration" + 0.007*"infrastructure"
+2018-06-12 13:23:52,673 : INFO : topic #0 (0.100): 0.017*"team" + 0.015*"product" + 0.010*"need" + 0.010*"work" + 0.009*"year" + 0.007*"working" + 0.007*"computer" + 0.006*"new" + 0.006*"process" + 0.006*"environment"
+2018-06-12 13:23:52,673 : INFO : topic diff=0.005511, rho=0.152499
+2018-06-12 13:23:53,085 : INFO : -7.226 per-word bound, 149.7 perplexity estimate based on a held-out corpus of 510 documents with 50969 words
+2018-06-12 13:23:53,085 : INFO : PROGRESS: pass 42, at document #510/510
+2018-06-12 13:23:53,280 : INFO : topic #8 (0.100): 0.012*"application" + 0.011*"tool" + 0.009*"knowledge" + 0.009*"need" + 0.008*"team" + 0.008*"solution" + 0.007*"service" + 0.007*"client" + 0.007*"integration" + 0.007*"infrastructure"
+2018-06-12 13:23:53,280 : INFO : topic #2 (0.100): 0.024*"sql" + 0.017*"year" + 0.015*"need" + 0.011*"etl" + 0.010*"tableau" + 0.010*"working" + 0.009*"intelligence" + 0.009*"work" + 0.009*"strong" + 0.009*"database"
+2018-06-12 13:23:53,280 : INFO : topic #5 (0.100): 0.016*"plus" + 0.015*"performance" + 0.012*"knowledge" + 0.009*"need" + 0.007*"solution" + 0.007*"year" + 0.006*"position" + 0.006*"team" + 0.006*"ability" + 0.006*"field"
+2018-06-12 13:23:53,280 : INFO : topic #0 (0.100): 0.017*"team" + 0.015*"product" + 0.010*"need" + 0.010*"work" + 0.009*"year" + 0.007*"working" + 0.007*"computer" + 0.006*"new" + 0.006*"process" + 0.006*"environment"
+2018-06-12 13:23:53,280 : INFO : topic #6 (0.100): 0.019*"knowledge" + 0.009*"need" + 0.008*"solution" + 0.008*"develop" + 0.008*"environment" + 0.008*"java" + 0.007*"programming" + 0.007*"network" + 0.007*"application" + 0.007*"platform"
+2018-06-12 13:23:53,280 : INFO : topic diff=0.005287, rho=0.150756
+2018-06-12 13:23:53,825 : INFO : -7.225 per-word bound, 149.6 perplexity estimate based on a held-out corpus of 510 documents with 50969 words
+2018-06-12 13:23:53,825 : INFO : PROGRESS: pass 43, at document #510/510
+2018-06-12 13:23:54,067 : INFO : topic #1 (0.100): 0.022*"project" + 0.012*"year" + 0.012*"passion" + 0.010*"skill" + 0.010*"teaching" + 0.009*"quarter" + 0.009*"scientist" + 0.008*"team" + 0.008*"course" + 0.008*"senior"
+2018-06-12 13:23:54,067 : INFO : topic #4 (0.100): 0.012*"work" + 0.011*"team" + 0.011*"year" + 0.011*"machine" + 0.011*"need" + 0.011*"learning" + 0.010*"customer" + 0.008*"technology" + 0.008*"solution" + 0.007*"company"
+2018-06-12 13:23:54,067 : INFO : topic #8 (0.100): 0.012*"application" + 0.011*"tool" + 0.009*"knowledge" + 0.009*"need" + 0.008*"team" + 0.008*"solution" + 0.007*"service" + 0.007*"client" + 0.007*"integration" + 0.007*"infrastructure"
+2018-06-12 13:23:54,068 : INFO : topic #5 (0.100): 0.016*"plus" + 0.015*"performance" + 0.012*"knowledge" + 0.009*"need" + 0.007*"solution" + 0.007*"year" + 0.006*"position" + 0.006*"team" + 0.006*"ability" + 0.006*"field"
+2018-06-12 13:23:54,068 : INFO : topic #2 (0.100): 0.024*"sql" + 0.017*"year" + 0.015*"need" + 0.011*"etl" + 0.010*"tableau" + 0.010*"working" + 0.009*"intelligence" + 0.009*"work" + 0.009*"strong" + 0.009*"database"
+2018-06-12 13:23:54,068 : INFO : topic diff=0.005115, rho=0.149071
+2018-06-12 13:23:54,879 : INFO : -7.225 per-word bound, 149.6 perplexity estimate based on a held-out corpus of 510 documents with 50969 words
+2018-06-12 13:23:54,879 : INFO : PROGRESS: pass 44, at document #510/510
+2018-06-12 13:23:55,282 : INFO : topic #0 (0.100): 0.017*"team" + 0.015*"product" + 0.010*"need" + 0.010*"work" + 0.009*"year" + 0.007*"computer" + 0.007*"working" + 0.006*"new" + 0.006*"process" + 0.006*"environment"
+2018-06-12 13:23:55,286 : INFO : topic #5 (0.100): 0.016*"plus" + 0.015*"performance" + 0.012*"knowledge" + 0.009*"need" + 0.007*"solution" + 0.007*"year" + 0.006*"position" + 0.006*"team" + 0.006*"ability" + 0.006*"field"
+2018-06-12 13:23:55,286 : INFO : topic #2 (0.100): 0.024*"sql" + 0.017*"year" + 0.015*"need" + 0.011*"etl" + 0.010*"tableau" + 0.010*"working" + 0.009*"intelligence" + 0.009*"work" + 0.009*"strong" + 0.009*"database"
+2018-06-12 13:23:55,287 : INFO : topic #1 (0.100): 0.022*"project" + 0.012*"year" + 0.012*"passion" + 0.010*"skill" + 0.010*"teaching" + 0.009*"quarter" + 0.009*"scientist" + 0.008*"team" + 0.008*"course" + 0.008*"senior"
+2018-06-12 13:23:55,287 : INFO : topic #4 (0.100): 0.012*"work" + 0.011*"team" + 0.011*"year" + 0.011*"machine" + 0.011*"need" + 0.011*"learning" + 0.010*"customer" + 0.008*"technology" + 0.008*"solution" + 0.007*"company"
+2018-06-12 13:23:55,287 : INFO : topic diff=0.004919, rho=0.147442
+2018-06-12 13:23:55,832 : INFO : -7.225 per-word bound, 149.6 perplexity estimate based on a held-out corpus of 510 documents with 50969 words
+2018-06-12 13:23:55,832 : INFO : PROGRESS: pass 45, at document #510/510
+2018-06-12 13:23:56,265 : INFO : topic #7 (0.100): 0.026*"learning" + 0.021*"machine" + 0.013*"work" + 0.013*"python" + 0.012*"need" + 0.010*"year" + 0.010*"team" + 0.009*"please" + 0.008*"big" + 0.008*"scientist"
+2018-06-12 13:23:56,265 : INFO : topic #8 (0.100): 0.012*"application" + 0.011*"tool" + 0.009*"knowledge" + 0.009*"need" + 0.008*"team" + 0.008*"solution" + 0.007*"service" + 0.007*"client" + 0.007*"integration" + 0.007*"infrastructure"
+2018-06-12 13:23:56,266 : INFO : topic #2 (0.100): 0.024*"sql" + 0.017*"year" + 0.015*"need" + 0.011*"etl" + 0.010*"tableau" + 0.010*"working" + 0.010*"intelligence" + 0.009*"work" + 0.009*"strong" + 0.009*"database"
+2018-06-12 13:23:56,266 : INFO : topic #3 (0.100): 0.017*"reporting" + 0.016*"project" + 0.014*"financial" + 0.012*"knowledge" + 0.010*"need" + 0.010*"user" + 0.009*"position" + 0.009*"process" + 0.008*"working" + 0.008*"analyst"
+2018-06-12 13:23:56,266 : INFO : topic #5 (0.100): 0.016*"plus" + 0.015*"performance" + 0.012*"knowledge" + 0.009*"need" + 0.007*"solution" + 0.007*"year" + 0.006*"position" + 0.006*"team" + 0.006*"ability" + 0.006*"field"
+2018-06-12 13:23:56,267 : INFO : topic diff=0.004730, rho=0.145865
+2018-06-12 13:23:57,139 : INFO : -7.224 per-word bound, 149.5 perplexity estimate based on a held-out corpus of 510 documents with 50969 words
+2018-06-12 13:23:57,139 : INFO : PROGRESS: pass 46, at document #510/510
+2018-06-12 13:23:57,399 : INFO : topic #4 (0.100): 0.012*"work" + 0.011*"team" + 0.011*"year" + 0.011*"machine" + 0.011*"need" + 0.011*"learning" + 0.010*"customer" + 0.008*"technology" + 0.008*"solution" + 0.007*"company"
+2018-06-12 13:23:57,400 : INFO : topic #8 (0.100): 0.012*"application" + 0.011*"tool" + 0.009*"knowledge" + 0.009*"need" + 0.008*"team" + 0.008*"solution" + 0.007*"service" + 0.007*"client" + 0.007*"integration" + 0.007*"infrastructure"
+2018-06-12 13:23:57,400 : INFO : topic #6 (0.100): 0.019*"knowledge" + 0.009*"need" + 0.008*"solution" + 0.008*"develop" + 0.008*"environment" + 0.008*"java" + 0.007*"programming" + 0.007*"network" + 0.007*"application" + 0.007*"platform"
+2018-06-12 13:23:57,400 : INFO : topic #9 (0.100): 0.011*"need" + 0.011*"java" + 0.011*"year" + 0.010*"product" + 0.010*"technology" + 0.010*"cloud" + 0.009*"application" + 0.009*"tool" + 0.009*"etc" + 0.008*"team"
+2018-06-12 13:23:57,400 : INFO : topic #0 (0.100): 0.017*"team" + 0.015*"product" + 0.010*"need" + 0.010*"work" + 0.009*"year" + 0.007*"computer" + 0.007*"working" + 0.006*"new" + 0.006*"process" + 0.006*"environment"
+2018-06-12 13:23:57,401 : INFO : topic diff=0.004569, rho=0.144338
+2018-06-12 13:23:58,345 : INFO : -7.224 per-word bound, 149.5 perplexity estimate based on a held-out corpus of 510 documents with 50969 words
+2018-06-12 13:23:58,345 : INFO : PROGRESS: pass 47, at document #510/510
+2018-06-12 13:23:59,086 : INFO : topic #1 (0.100): 0.022*"project" + 0.012*"year" + 0.012*"passion" + 0.010*"skill" + 0.010*"teaching" + 0.009*"quarter" + 0.009*"scientist" + 0.008*"team" + 0.008*"course" + 0.008*"senior"
+2018-06-12 13:23:59,087 : INFO : topic #9 (0.100): 0.011*"need" + 0.011*"java" + 0.011*"year" + 0.010*"product" + 0.010*"technology" + 0.010*"cloud" + 0.009*"application" + 0.009*"tool" + 0.009*"etc" + 0.008*"team"
+2018-06-12 13:23:59,087 : INFO : topic #6 (0.100): 0.019*"knowledge" + 0.009*"need" + 0.008*"solution" + 0.008*"develop" + 0.008*"environment" + 0.008*"java" + 0.007*"programming" + 0.007*"network" + 0.007*"application" + 0.007*"platform"
+2018-06-12 13:23:59,087 : INFO : topic #3 (0.100): 0.017*"reporting" + 0.016*"project" + 0.014*"financial" + 0.012*"knowledge" + 0.010*"need" + 0.010*"user" + 0.009*"position" + 0.009*"process" + 0.008*"working" + 0.008*"analyst"
+2018-06-12 13:23:59,088 : INFO : topic #0 (0.100): 0.017*"team" + 0.015*"product" + 0.010*"need" + 0.010*"work" + 0.009*"year" + 0.007*"computer" + 0.007*"working" + 0.006*"new" + 0.006*"process" + 0.006*"environment"
+2018-06-12 13:23:59,088 : INFO : topic diff=0.004399, rho=0.142857
+2018-06-12 13:24:00,080 : INFO : -7.224 per-word bound, 149.5 perplexity estimate based on a held-out corpus of 510 documents with 50969 words
+2018-06-12 13:24:00,080 : INFO : PROGRESS: pass 48, at document #510/510
+2018-06-12 13:24:00,370 : INFO : topic #0 (0.100): 0.017*"team" + 0.015*"product" + 0.010*"need" + 0.010*"work" + 0.009*"year" + 0.007*"computer" + 0.007*"working" + 0.006*"new" + 0.006*"process" + 0.006*"environment"
+2018-06-12 13:24:00,370 : INFO : topic #7 (0.100): 0.026*"learning" + 0.021*"machine" + 0.013*"work" + 0.013*"python" + 0.012*"need" + 0.010*"year" + 0.010*"team" + 0.009*"please" + 0.008*"big" + 0.008*"scientist"
+2018-06-12 13:24:00,371 : INFO : topic #6 (0.100): 0.019*"knowledge" + 0.009*"need" + 0.008*"solution" + 0.008*"develop" + 0.008*"environment" + 0.008*"java" + 0.007*"programming" + 0.007*"network" + 0.007*"application" + 0.007*"platform"
+2018-06-12 13:24:00,371 : INFO : topic #3 (0.100): 0.017*"reporting" + 0.016*"project" + 0.014*"financial" + 0.012*"knowledge" + 0.010*"need" + 0.010*"user" + 0.009*"position" + 0.009*"process" + 0.008*"working" + 0.008*"analyst"
+2018-06-12 13:24:00,371 : INFO : topic #4 (0.100): 0.012*"work" + 0.011*"team" + 0.011*"year" + 0.011*"machine" + 0.011*"need" + 0.011*"learning" + 0.010*"customer" + 0.008*"technology" + 0.008*"solution" + 0.007*"company"
+2018-06-12 13:24:00,372 : INFO : topic diff=0.004236, rho=0.141421
+2018-06-12 13:24:01,177 : INFO : -7.223 per-word bound, 149.4 perplexity estimate based on a held-out corpus of 510 documents with 50969 words
+2018-06-12 13:24:01,177 : INFO : PROGRESS: pass 49, at document #510/510
+2018-06-12 13:24:01,568 : INFO : topic #6 (0.100): 0.019*"knowledge" + 0.009*"need" + 0.008*"solution" + 0.008*"develop" + 0.008*"environment" + 0.008*"java" + 0.007*"programming" + 0.007*"network" + 0.007*"application" + 0.007*"platform"
+2018-06-12 13:24:01,568 : INFO : topic #2 (0.100): 0.024*"sql" + 0.017*"year" + 0.015*"need" + 0.011*"etl" + 0.010*"tableau" + 0.010*"intelligence" + 0.010*"working" + 0.009*"work" + 0.009*"strong" + 0.009*"database"
+2018-06-12 13:24:01,569 : INFO : topic #0 (0.100): 0.017*"team" + 0.015*"product" + 0.010*"need" + 0.010*"work" + 0.009*"year" + 0.007*"computer" + 0.007*"working" + 0.006*"new" + 0.006*"process" + 0.006*"environment"
+2018-06-12 13:24:01,569 : INFO : topic #3 (0.100): 0.017*"reporting" + 0.016*"project" + 0.014*"financial" + 0.012*"knowledge" + 0.010*"need" + 0.010*"user" + 0.009*"position" + 0.009*"process" + 0.008*"working" + 0.008*"analyst"
+2018-06-12 13:24:01,569 : INFO : topic #1 (0.100): 0.022*"project" + 0.012*"year" + 0.012*"passion" + 0.010*"skill" + 0.010*"teaching" + 0.009*"quarter" + 0.009*"scientist" + 0.008*"team" + 0.008*"course" + 0.008*"senior"
+2018-06-12 13:24:01,569 : INFO : topic diff=0.004074, rho=0.140028
+2018-06-12 13:24:01,600 : INFO : topic #0 (0.100): 0.017*"team" + 0.015*"product" + 0.010*"need" + 0.010*"work" + 0.009*"year" + 0.007*"computer" + 0.007*"working" + 0.006*"new" + 0.006*"process" + 0.006*"environment"
+2018-06-12 13:24:01,600 : INFO : topic #1 (0.100): 0.022*"project" + 0.012*"year" + 0.012*"passion" + 0.010*"skill" + 0.010*"teaching" + 0.009*"quarter" + 0.009*"scientist" + 0.008*"team" + 0.008*"course" + 0.008*"senior"
+2018-06-12 13:24:01,600 : INFO : topic #2 (0.100): 0.024*"sql" + 0.017*"year" + 0.015*"need" + 0.011*"etl" + 0.010*"tableau" + 0.010*"intelligence" + 0.010*"working" + 0.009*"work" + 0.009*"strong" + 0.009*"database"
+2018-06-12 13:24:01,601 : INFO : topic #3 (0.100): 0.017*"reporting" + 0.016*"project" + 0.014*"financial" + 0.012*"knowledge" + 0.010*"need" + 0.010*"user" + 0.009*"position" + 0.009*"process" + 0.008*"working" + 0.008*"analyst"
+2018-06-12 13:24:01,602 : INFO : topic #4 (0.100): 0.012*"work" + 0.011*"team" + 0.011*"year" + 0.011*"machine" + 0.011*"need" + 0.011*"learning" + 0.010*"customer" + 0.008*"technology" + 0.008*"solution" + 0.007*"company"
+2018-06-12 13:24:01,602 : INFO : topic #5 (0.100): 0.016*"plus" + 0.015*"performance" + 0.012*"knowledge" + 0.009*"need" + 0.007*"solution" + 0.007*"year" + 0.006*"position" + 0.006*"team" + 0.006*"ability" + 0.006*"field"
+2018-06-12 13:24:01,602 : INFO : topic #6 (0.100): 0.019*"knowledge" + 0.009*"need" + 0.008*"solution" + 0.008*"develop" + 0.008*"environment" + 0.008*"java" + 0.007*"programming" + 0.007*"network" + 0.007*"application" + 0.007*"platform"
+2018-06-12 13:24:01,603 : INFO : topic #7 (0.100): 0.026*"learning" + 0.021*"machine" + 0.013*"work" + 0.013*"python" + 0.012*"need" + 0.010*"year" + 0.010*"team" + 0.009*"please" + 0.008*"big" + 0.008*"scientist"
+2018-06-12 13:24:01,603 : INFO : topic #8 (0.100): 0.012*"application" + 0.011*"tool" + 0.009*"knowledge" + 0.009*"need" + 0.008*"team" + 0.008*"solution" + 0.007*"service" + 0.007*"client" + 0.007*"infrastructure" + 0.007*"integration"
+2018-06-12 13:24:01,604 : INFO : topic #9 (0.100): 0.011*"need" + 0.011*"java" + 0.011*"year" + 0.010*"technology" + 0.010*"product" + 0.010*"cloud" + 0.009*"application" + 0.009*"tool" + 0.009*"etc" + 0.008*"team"
+2018-06-12 13:24:01,632 : INFO : saving LdaState object under topic.model.state, separately None
+2018-06-12 13:24:01,637 : INFO : saved topic.model.state
+2018-06-12 13:24:01,643 : INFO : saving LdaModel object under topic.model, separately ['expElogbeta', 'sstats']
+2018-06-12 13:24:01,644 : INFO : storing np array 'expElogbeta' to topic.model.expElogbeta.npy
+2018-06-12 13:24:01,646 : INFO : not storing attribute id2word
+2018-06-12 13:24:01,646 : INFO : not storing attribute dispatcher
+2018-06-12 13:24:01,646 : INFO : not storing attribute state
+2018-06-12 13:24:01,647 : INFO : saved topic.model
+2018-06-12 13:24:01,980 : INFO : loading Dictionary object from dictionary.dict
+2018-06-12 13:24:01,984 : INFO : loaded dictionary.dict
+2018-06-12 13:24:01,985 : INFO : loaded corpus index from corpus.mm.index
+2018-06-12 13:24:01,985 : INFO : initializing cython corpus reader from corpus.mm
+2018-06-12 13:24:01,985 : INFO : accepted corpus with 510 documents, 4762 features, 40903 non-zero entries
+2018-06-12 13:24:01,985 : INFO : loading LdaModel object from topic.model
+2018-06-12 13:24:01,986 : INFO : loading expElogbeta from topic.model.expElogbeta.npy with mmap=None
+2018-06-12 13:24:01,987 : INFO : setting ignored attribute id2word to None
+2018-06-12 13:24:01,987 : INFO : setting ignored attribute dispatcher to None
+2018-06-12 13:24:01,987 : INFO : setting ignored attribute state to None
+2018-06-12 13:24:01,987 : INFO : loaded topic.model
+2018-06-12 13:24:01,987 : INFO : loading LdaState object from topic.model.state
+2018-06-12 13:24:01,990 : INFO : loaded topic.model.state
+2018-06-12 13:24:05,470 : INFO : loading LdaModel object from topic.model
+2018-06-12 13:24:05,471 : INFO : loading expElogbeta from topic.model.expElogbeta.npy with mmap=None
+2018-06-12 13:24:05,477 : INFO : setting ignored attribute id2word to None
+2018-06-12 13:24:05,477 : INFO : setting ignored attribute dispatcher to None
+2018-06-12 13:24:05,477 : INFO : setting ignored attribute state to None
+2018-06-12 13:24:05,478 : INFO : loaded topic.model
+2018-06-12 13:24:05,479 : INFO : loading LdaState object from topic.model.state
+2018-06-12 13:24:05,483 : INFO : loaded topic.model.state
